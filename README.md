@@ -1,4 +1,4 @@
-# Open Computers and TypeScript
+# OpenComputers and TypeScript
 
 <div align="center">
 <img src="https://gamepedia.cursecdn.com/minecraft_ru_gamepedia/f/f4/Корпус_компьютера1_(OpenComputers).png" alt="TypeScriptToLua" width="256" />
