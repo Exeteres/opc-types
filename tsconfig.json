@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "target": "esnext",
+        "outDir": "dist",
+        "module": "commonjs",
+        "lib": ["esnext"],
+        "strict": true,
+        "moduleResolution": "node",
+        "rootDir": "examples",
+        "types": ["lua-types/jit"]
+    },
+    "tstl": {
+        "luaTarget": "JIT"
+    }
+}

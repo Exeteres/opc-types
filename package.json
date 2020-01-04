@@ -1,0 +1,17 @@
+{
+    "name": "opct",
+    "version": "0.0.1",
+    "author": "Exeteres",
+    "license": "MIT",
+    "private": true,
+    "scripts": {
+        "build-examples": "tstl"
+    },
+    "workspaces": [
+        "packages/*"
+    ],
+    "devDependencies": {
+        "lua-types": "^2.5.1",
+        "typescript-to-lua": "^0.22.1"
+    }
+}

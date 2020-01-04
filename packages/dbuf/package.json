@@ -1,0 +1,15 @@
+{
+    "name": "@opct/dbuf",
+    "version": "0.0.1",
+    "description": "TypeScript definitions for DoubleBuffering library by IgorTimofeev",
+    "types": "index.d.ts",
+    "keywords": [
+        "typescript",
+        "tstl",
+        "open computers",
+        "doubleBuffering",
+        "types"
+    ],
+    "license": "MIT",
+    "author": "Exeteres"
+}

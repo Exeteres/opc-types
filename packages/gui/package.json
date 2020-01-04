@@ -1,0 +1,15 @@
+{
+    "name": "@opct/gui",
+    "version": "0.0.1",
+    "description": "TypeScript definitions for GUI library by IgorTimofeev",
+    "types": "index.d.ts",
+    "keywords": [
+        "typescript",
+        "tstl",
+        "open computers",
+        "gui",
+        "types"
+    ],
+    "license": "MIT",
+    "author": "Exeteres"
+}

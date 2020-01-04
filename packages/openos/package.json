@@ -1,0 +1,18 @@
+{
+    "name": "@opct/openos",
+    "version": "0.0.4",
+    "description": "TypeScript definitions for Open Computers",
+    "types": "index.d.ts",
+    "keywords": [
+        "typescript",
+        "tstl",
+        "open computers",
+        "types"
+    ],
+    "license": "MIT",
+    "author": "Exeteres",
+    "dependencies": {
+        "lua-types": "^2.5.1",
+        "typescript-tuple": "^2.2.1"
+    }
+}
