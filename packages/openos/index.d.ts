@@ -1,4 +1,5 @@
 import "./utils";
+import "./components";
 import "./component";
 import "./computer";
 import "./event";
