@@ -61,71 +61,95 @@ declare module "component" {
      * Returns the full address on success, or null and an error message otherwise.
      * Optionally filters by component type.
      */
-    function get(address: string, componentType: "redstone"): Redstone | null;
-    function get(address: string, componentType: "drone"): Drone | null;
+    function get(
+        address: string,
+        componentType: "redstone"
+    ): OpenOS.Redstone | null;
+    function get(address: string, componentType: "drone"): OpenOS.Drone | null;
     function get(
         address: string,
         componentType: "abstract_bus"
-    ): AbstractBus | null;
+    ): OpenOS.AbstractBus | null;
     function get(
         address: string,
         componentType: "access_point"
-    ): AccessPoint | null;
+    ): OpenOS.AccessPoint | null;
     function get(
         address: string,
         componentType: "chunkloader"
-    ): Chunkloader | null;
-    function get(address: string, componentType: "computer"): Computer | null;
-    function get(address: string, componentType: "crafting"): Crafting | null;
-    function get(address: string, componentType: "data"): Data | null;
-    function get(address: string, componentType: "database"): Database | null;
-    function get(address: string, componentType: "debug"): Debug | null;
-    function get(address: string, componentType: "drive"): Drive | null;
-    function get(address: string, componentType: "eeprom"): EEPROM | null;
+    ): OpenOS.Chunkloader | null;
+    function get(
+        address: string,
+        componentType: "computer"
+    ): OpenOS.Computer | null;
+    function get(
+        address: string,
+        componentType: "crafting"
+    ): OpenOS.Crafting | null;
+    function get(address: string, componentType: "data"): OpenOS.Data | null;
+    function get(
+        address: string,
+        componentType: "database"
+    ): OpenOS.Database | null;
+    function get(address: string, componentType: "debug"): OpenOS.Debug | null;
+    function get(address: string, componentType: "drive"): OpenOS.Drive | null;
+    function get(
+        address: string,
+        componentType: "eeprom"
+    ): OpenOS.EEPROM | null;
     function get(
         address: string,
         componentType: "experience"
-    ): Experience | null;
+    ): OpenOS.Experience | null;
     function get(
         address: string,
         componentType: "filesystem"
-    ): Filesystem | null;
+    ): OpenOS.Filesystem | null;
     function get(address: string, componentType: "generator"): Generator | null;
-    function get(address: string, componentType: "geolyzer"): Geolyzer | null;
-    function get(address: string, componentType: "gpu"): GPU | null;
-    function get(address: string, componentType: "hologram"): Hologram | null;
-    function get(address: string, componentType: "internet"): Internet | null;
+    function get(
+        address: string,
+        componentType: "geolyzer"
+    ): OpenOS.Geolyzer | null;
+    function get(address: string, componentType: "gpu"): OpenOS.GPU | null;
+    function get(
+        address: string,
+        componentType: "hologram"
+    ): OpenOS.Hologram | null;
+    function get(
+        address: string,
+        componentType: "internet"
+    ): OpenOS.Internet | null;
     function get(address: string, componentType: string): any | null;
 
     /**
      * Checks if there is a primary component of the specified component type.
      */
-    function isAvailable(componentType: Component): boolean;
+    function isAvailable(componentType: OpenOS.Component): boolean;
     function isAvailable(componentType: string): boolean;
 
     /**
      * Gets the proxy for the primary component of the specified type.
      * Throws an error if there is no primary component of the specified type.
      */
-    function getPrimary(componentType: "redstone"): Redstone;
-    function getPrimary(componentType: "drone"): Drone;
-    function getPrimary(componentType: "abstract_bus"): AbstractBus;
-    function getPrimary(componentType: "access_point"): AccessPoint;
-    function getPrimary(componentType: "chunkloader"): Chunkloader;
-    function getPrimary(componentType: "computer"): Computer;
-    function getPrimary(componentType: "crafting"): Crafting;
-    function getPrimary(componentType: "data"): Data;
-    function getPrimary(componentType: "database"): Database;
-    function getPrimary(componentType: "debug"): Debug;
-    function getPrimary(componentType: "drive"): Drive;
-    function getPrimary(componentType: "eeprom"): EEPROM;
-    function getPrimary(componentType: "experience"): Experience;
-    function getPrimary(componentType: "filesystem"): Filesystem;
+    function getPrimary(componentType: "redstone"): OpenOS.Redstone;
+    function getPrimary(componentType: "drone"): OpenOS.Drone;
+    function getPrimary(componentType: "abstract_bus"): OpenOS.AbstractBus;
+    function getPrimary(componentType: "access_point"): OpenOS.AccessPoint;
+    function getPrimary(componentType: "chunkloader"): OpenOS.Chunkloader;
+    function getPrimary(componentType: "computer"): OpenOS.Computer;
+    function getPrimary(componentType: "crafting"): OpenOS.Crafting;
+    function getPrimary(componentType: "data"): OpenOS.Data;
+    function getPrimary(componentType: "database"): OpenOS.Database;
+    function getPrimary(componentType: "debug"): OpenOS.Debug;
+    function getPrimary(componentType: "drive"): OpenOS.Drive;
+    function getPrimary(componentType: "eeprom"): OpenOS.EEPROM;
+    function getPrimary(componentType: "experience"): OpenOS.Experience;
+    function getPrimary(componentType: "filesystem"): OpenOS.Filesystem;
     function getPrimary(componentType: "generator"): Generator;
-    function getPrimary(componentType: "geolyzer"): Geolyzer;
-    function getPrimary(componentType: "gpu"): GPU;
-    function getPrimary(componentType: "hologram"): Hologram;
-    function getPrimary(componentType: "internet"): Internet;
+    function getPrimary(componentType: "geolyzer"): OpenOS.Geolyzer;
+    function getPrimary(componentType: "gpu"): OpenOS.GPU;
+    function getPrimary(componentType: "hologram"): OpenOS.Hologram;
+    function getPrimary(componentType: "internet"): OpenOS.Internet;
     function getPrimary(componentType: string): any;
 
     /**
@@ -137,116 +161,118 @@ declare module "component" {
     /**
      * This component represents a Redstone card.
      */
-    const redstone: Redstone;
+    const redstone: OpenOS.Redstone;
 
     /**
      * This component represents a Drone.
      */
-    const drone: Drone;
+    const drone: OpenOS.Drone;
 
     /**
      * This component represents an Abstract Bus.
      */
-    const abstract_bus: AbstractBus;
+    const abstract_bus: OpenOS.AbstractBus;
 
     /**
      * This component represents an Access Point.
      */
-    const access_point: AccessPoint;
+    const access_point: OpenOS.AccessPoint;
 
     /**
      * This component represents a Chunkloader.
      */
-    const chunkloader: Chunkloader;
+    const chunkloader: OpenOS.Chunkloader;
 
     /**
      * This component represents a Computer.
      */
-    const computer: Computer;
+    const computer: OpenOS.Computer;
 
     /**
      * This component represents a Crafting.
      */
-    const crafting: Computer;
+    const crafting: OpenOS.Computer;
 
     /**
      * This component represents a Data card.
      */
-    const data: Data;
+    const data: OpenOS.Data;
 
     /**
      * This component represents a Database.
      */
-    const database: Database;
+    const database: OpenOS.Database;
 
     /**
      * This component represents a Debug card.
      */
-    const debug: Debug;
+    const debug: OpenOS.Debug;
 
     /**
      * This component represents a Drive.
      */
-    const drive: Drive;
+    const drive: OpenOS.Drive;
 
     /**
      * This component represents an EEPROM.
      */
-    const eeprom: EEPROM;
+    const eeprom: OpenOS.EEPROM;
 
     /**
      * This component represents an Experience upgrade.
      */
-    const experience: Experience;
+    const experience: OpenOS.Experience;
 
     /**
      * This component represents a Filesystem.
      */
-    const filesystem: Filesystem;
+    const filesystem: OpenOS.Filesystem;
 
     /**
      * This component represents a Generator.
      */
-    const generator: Generator;
+    const generator: OpenOS.Generator;
 
     /**
      * This component represents a Geolyzer.
      */
-    const geolyzer: Geolyzer;
+    const geolyzer: OpenOS.Geolyzer;
 
     /**
      * This component represents a GPU.
      */
-    const gpu: GPU;
+    const gpu: OpenOS.GPU;
 
     /**
      * This component represents a Hologram.
      */
-    const hologram: Hologram;
+    const hologram: OpenOS.Hologram;
 
     /**
      * This component represents an Internet card.
      */
-    const internet: Internet;
+    const internet: OpenOS.Internet;
 }
 
-type Component =
-    | "redstone"
-    | "drone"
-    | "abstract_bus"
-    | "access_point"
-    | "chunkloader"
-    | "computer"
-    | "crafting"
-    | "data"
-    | "database"
-    | "debug"
-    | "drive"
-    | "eeprom"
-    | "experience"
-    | "filesystem"
-    | "generator"
-    | "geolyzer"
-    | "gpu"
-    | "hologram"
-    | "internet";
+declare namespace OpenOS {
+    type Component =
+        | "redstone"
+        | "drone"
+        | "abstract_bus"
+        | "access_point"
+        | "chunkloader"
+        | "computer"
+        | "crafting"
+        | "data"
+        | "database"
+        | "debug"
+        | "drive"
+        | "eeprom"
+        | "experience"
+        | "filesystem"
+        | "generator"
+        | "geolyzer"
+        | "gpu"
+        | "hologram"
+        | "internet";
+}
