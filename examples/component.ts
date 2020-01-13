@@ -3,6 +3,10 @@
 import * as component from "component";
 import { front } from "sides";
 
+for (let [address, name] of component.list()) {
+    print(address, name);
+}
+
 // Check for redstone card
 if (component.isAvailable("redstone")) {
     const redstone = component.redstone;

@@ -11,11 +11,13 @@ declare module "component" {
      */
     function doc(address: string, method: string): string;
 
+    type ComponentList = LuaTupleIterable<string[]>;
+
     /**
      * Returns a table with all components currently attached to the computer,
      * with address as a key and component type as a value.
      */
-    function list(filter?: string, exact?: boolean): Function;
+    function list(filter?: string, exact?: boolean): ComponentList;
 
     /**
      * Calls the method with the specified name on the component with the specified address,

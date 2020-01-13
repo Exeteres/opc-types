@@ -15,3 +15,7 @@ import "./term";
 import "./colors";
 import "./process";
 import "./filesystem";
+
+declare global {
+    const args: LuaVarArgs<string>;
+}
