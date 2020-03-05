@@ -121,6 +121,10 @@ declare module "component" {
         address: string,
         componentType: "internet"
     ): OpenOS.Internet | null;
+    function get(
+        address: string,
+        componentType: "modem"
+    ): OpenOS.Modem | null;
     function get(address: string, componentType: string): any | null;
 
     /**
@@ -152,6 +156,7 @@ declare module "component" {
     function getPrimary(componentType: "gpu"): OpenOS.GPU;
     function getPrimary(componentType: "hologram"): OpenOS.Hologram;
     function getPrimary(componentType: "internet"): OpenOS.Internet;
+    function getPrimary(componentType: "modem"): OpenOS.Modem;
     function getPrimary(componentType: string): any;
 
     /**
@@ -254,6 +259,11 @@ declare module "component" {
      * This component represents an Internet card.
      */
     const internet: OpenOS.Internet;
+
+    /**
+     * This component represents an Network card.
+     */
+    const modem: OpenOS.Modem;
 }
 
 declare namespace OpenOS {
@@ -276,5 +286,6 @@ declare namespace OpenOS {
         | "geolyzer"
         | "gpu"
         | "hologram"
-        | "internet";
+        | "internet"
+        | "modem";
 }

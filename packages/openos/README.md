@@ -50,7 +50,7 @@ This package contains type declarations for [OpenOS](https://ocdoc.cil.li/).
 - [x] Internet
 - [ ] Inventory Controller
 - [ ] Leash
-- [ ] Modem
+- [x] Modem
 - [ ] Motion Sensor
 - [ ] Navigation
 - [ ] Net Splitter
