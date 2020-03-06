@@ -1,4 +1,6 @@
 declare namespace OpenOS {
+    type ModemData = undefined | boolean | number | string;
+
     /**
      * This component is provided by network cards.
      * @see https://ocdoc.cil.li/component:modem
@@ -14,20 +16,20 @@ declare namespace OpenOS {
          * Returns the maximum packet size for sending messages via network cards. Defaults to 8192.
          * You can change this in the OpenComputers configuration file.
          * Every value in a message adds two bytes of overhead. (Even if there's only one value.)
-         * Numbers add another 8 bytes, true/false/nil another 4 bytes, and strings exactly as many bytes 
+         * Numbers add another 8 bytes, true/false/nil another 4 bytes, and strings exactly as many bytes
          * as the string contains—though empty strings still count as one byte.
          */
         maxPacketSize(): number;
 
         /**
-         * Returns whether the specified “port” is currently being listened on. 
+         * Returns whether the specified “port” is currently being listened on.
          * Messages only trigger signals when they arrive on a port that is open.
          */
         isOpen(port: number): boolean;
 
         /**
-         * Opens the specified port number for listening. Returns true if the port was opened, 
-         * false if it was already open. Note: maximum port is 65535 
+         * Opens the specified port number for listening. Returns true if the port was opened,
+         * false if it was already open. Note: maximum port is 65535
          */
         open(port: number): boolean;
 
@@ -37,19 +39,19 @@ declare namespace OpenOS {
         close(...port: number[]): boolean;
 
         /**
-         * Sends a network message to the specified address. Returns true if the message was sent. 
-         * This does not mean the message was received, only that it was sent. 
+         * Sends a network message to the specified address. Returns true if the message was sent.
+         * This does not mean the message was received, only that it was sent.
          * Any additional arguments are passed along as data.
          */
-        send(address: string, port: number, ...data: (undefined | boolean | number | string)[]): boolean;
+        send(address: string, port: number, ...data: ModemData[]): boolean;
 
         /**
-         * Sends a broadcast message. This message is delivered to all reachable network cards. 
-         * Returns true if the message was sent. Note that broadcast messages are not delivered 
+         * Sends a broadcast message. This message is delivered to all reachable network cards.
+         * Returns true if the message was sent. Note that broadcast messages are not delivered
          * to the modem that sent the message. All additional arguments are passed along as data.
          * @see send
          */
-        broadcast(port: number, ...data:  (undefined | boolean | number | string)[]): boolean;
+        broadcast(port: number, ...data: ModemData[]): boolean;
 
         /**
          * The current signal strength to apply when sending messages. Wireless network cards only.
@@ -75,6 +77,6 @@ declare namespace OpenOS {
          * Sets the wake-up message to the specified string. The message matching can be fuzzy (default is false).
          * A fuzzy match ignores additional trailing arguments in the network packet.
          */
-        setWakeMessage(message: string, fuzzy?: boolean): string
+        setWakeMessage(message: string, fuzzy?: boolean): string;
     }
 }

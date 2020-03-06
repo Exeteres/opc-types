@@ -121,10 +121,7 @@ declare module "component" {
         address: string,
         componentType: "internet"
     ): OpenOS.Internet | null;
-    function get(
-        address: string,
-        componentType: "modem"
-    ): OpenOS.Modem | null;
+    function get(address: string, componentType: "modem"): OpenOS.Modem | null;
     function get(address: string, componentType: string): any | null;
 
     /**
