@@ -21,7 +21,7 @@ This repository contains type declarations for [OpenOS](https://ocdoc.cil.li/) a
 
 It is assumed that you will use [TypeScriptToLua](https://github.com/TypeScriptToLua/TypeScriptToLua) as a transpiler.
 
-Some examples can be found in the `examples` folder.
+Some examples can be found in the `examples` folder. Also look at [VSCode extension](https://github.com/Exeteres/oc-ts-extension), which integrates TypeScript with OpenComputers.
 
 ## Installation
 

@@ -21,7 +21,7 @@
 
 В качестве транспилера предполагается использование [TypeScriptToLua](https://github.com/TypeScriptToLua/TypeScriptToLua).
 
-В папке `examples` можно найти немного примеров.
+В папке `examples` можно найти немного примеров. Также обратите внимание на [VSCode расширение](https://github.com/Exeteres/oc-ts-extension) для интеграции TypeScript с OpenComputers.
 
 ## Установка
 
