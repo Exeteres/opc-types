@@ -1,5 +1,7 @@
 /**
- * @see https://github.com/IgorTimofeev/GUI
+ * This is a multifunctional user interface library,
+ * especially designed and optimized for low-performance computers.
+ * @see https://github.com/IgorTimofeev/MineOS/wiki/GUI-API
  */
 declare namespace GUI {
     interface Object {
@@ -36,7 +38,7 @@ declare namespace GUI {
          * Main method that is called to render this object on the screen.
          * It can be defined by the user in any convenient way
          */
-        draw(wtf?: boolean): void;
+        draw(): void;
 
         /** A pointer to the parent container of the object */
         parent: GUI.Container;
@@ -89,7 +91,7 @@ declare namespace GUI {
         removeChildren(fromIndex?: number, toIndex?: number): void;
     }
 
-    interface Application extends GUI.Container {
+    interface Workspace extends GUI.Container {
         /**
          * Run the event processing for this container and analyse events for all it's child objects.
          * The delay parameter is similar to `computer.pullSignal` one
@@ -709,12 +711,12 @@ declare module "GUI" {
         height: number
     ): GUI.Container;
 
-    export function application(
+    export function workspace(
         x?: number,
         y?: number,
         width?: number,
         height?: number
-    ): GUI.Application;
+    ): GUI.Workspace;
 
     export function panel(
         x: number,

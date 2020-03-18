@@ -1,6 +1,6 @@
 import {
     // Components
-    application,
+    workspace,
     panel,
     menu,
     actionButtons,
@@ -14,10 +14,9 @@ import {
     LUA_SYNTAX_COLOR_SCHEME
 } from "GUI";
 
-import { clear } from "term";
 import { isDirectory } from "filesystem";
 
-const app = application();
+const app = workspace();
 
 app.addChild(panel(1, 1, app.width, app.height, 0x2d2d2d));
 app.addChild(panel(1, 1, 4, 1, 0xeeeeee));
@@ -32,7 +31,6 @@ mainMenu.addItem("Edit");
 
 const buttons = app.addChild(actionButtons(1, 1, false));
 buttons.close.onTouch = () => {
-    clear();
     app.stop();
 };
 
@@ -83,5 +81,5 @@ const editor = app.addChild(
     )
 );
 
-app.draw(true);
+app.draw();
 app.start();
