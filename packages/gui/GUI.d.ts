@@ -38,7 +38,7 @@ declare namespace GUI {
          * Main method that is called to render this object on the screen.
          * It can be defined by the user in any convenient way
          */
-        draw(): void;
+        draw(force?: boolean): void;
 
         /** A pointer to the parent container of the object */
         parent: GUI.Container;
@@ -104,6 +104,8 @@ declare namespace GUI {
         /** Consume currently processing event and skip it's handling for rest unprocessed child objects */
         consumeEvent(): void;
     }
+
+    interface Application extends Workspace {}
 
     interface Panel extends GUI.Object {}
 
@@ -717,6 +719,13 @@ declare module "GUI" {
         width?: number,
         height?: number
     ): GUI.Workspace;
+
+    export function application(
+        x?: number,
+        y?: number,
+        width?: number,
+        height?: number
+    ): GUI.Application;
 
     export function panel(
         x: number,
