@@ -566,6 +566,34 @@ declare namespace GUI {
         /** Variable to set syntax highlighting */
         syntaxHighlight: boolean;
     }
+
+    interface Window extends GUI.Container {
+        resize(newWidth: number, newHeight: number): void;
+        close(): void;
+        minimize(): void;
+        maximize(): void;
+        onResize: (newWidth: number, newHeight: number) => void;
+    }
+
+    interface FilledWindow extends Window {
+        backgroundPanel: GUI.Panel;
+        actionButtons: GUI.ActionButtons;
+    }
+
+    interface TitleWindow extends FilledWindow {
+        titleLabel: string;
+        titlePanel: GUI.Panel;
+    }
+
+    interface TabbedWindow extends FilledWindow {
+        tabBar: any;
+    }
+
+    interface Palette extends GUI.Window {
+        color: any;
+        submitButton: GUI.Button;
+        cancelButton: GUI.Button;
+    }
 }
 
 /**
@@ -960,6 +988,42 @@ declare module "GUI" {
         syntaxHighlight: boolean,
         lines: string[]
     ): GUI.CodeView;
-}
 
-// TODO Контейнеры
+    export function window(
+        x: number,
+        y: number,
+        width: number,
+        height: number
+    ): GUI.Window;
+
+    export function filledWindow(
+        x: number,
+        y: number,
+        width: number,
+        height: number,
+        fillColor: number
+    ): GUI.FilledWindow;
+
+    export function titledWindow(
+        x: number,
+        y: number,
+        width: number,
+        height: number,
+        text: string,
+        addTitlePanel?: boolean
+    ): GUI.TitleWindow;
+
+    export function tabbedWindow(
+        x: number,
+        y: number,
+        width: number,
+        height: number
+    ): GUI.TabbedWindow;
+
+    export function palette(
+        x: number,
+        y: number,
+        width: number,
+        initialColor: number
+    ): GUI.Palette;
+}

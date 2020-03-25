@@ -29,6 +29,9 @@ Some examples can be found in the `examples` folder. Also look at [VSCode extens
 # Typings for OpenOS
 yarn add @opct/openos # or npm install @opct/openos -S
 
+# Typings for MineOS
+yarn add @opct/mineos
+
 # Typings for GUI
 yarn add @opct/gui
 
@@ -47,7 +50,12 @@ yarn add typescript-to-lua
         "strict": true,
         "moduleResolution": "node",
         "rootDir": "src",
-        "types": ["lua-types/jit", "@opct/openos", "@opct/gui"]
+        "types": [
+            "lua-types/jit",
+            "@opct/openos",
+            "@opct/gui",
+            "@opct/mineos"
+        ]
     },
     "tstl": {
         "luaTarget": "JIT"

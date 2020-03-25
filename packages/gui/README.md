@@ -33,11 +33,11 @@ This package contains type declarations for [GUI](https://github.com/IgorTimofee
 ### Containers
 
 - [x] layout
-- [ ] window
-- [ ] filledWindow
-- [ ] titledWindow
-- [ ] tabbedWindow
-- [ ] palette
+- [x] window
+- [x] filledWindow
+- [x] titledWindow
+- [x] tabbedWindow
+- [x] palette
 
 ### Standalone methods
 

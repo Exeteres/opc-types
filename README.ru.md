@@ -26,10 +26,13 @@
 ## Установка
 
 ```shell
-# Тайпиги для OpenOS
+# Typings for OpenOS
 yarn add @opct/openos # or npm install @opct/openos -S
 
-# Тайпиги для GUI
+# Typings for MineOS
+yarn add @opct/mineos
+
+# Typings for GUI
 yarn add @opct/gui
 
 # TSTL
@@ -47,7 +50,12 @@ yarn add typescript-to-lua
         "strict": true,
         "moduleResolution": "node",
         "rootDir": "src",
-        "types": ["lua-types/jit", "@opct/openos", "@opct/gui"]
+        "types": [
+            "lua-types/jit",
+            "@opct/openos",
+            "@opct/gui",
+            "@opct/mineos"
+        ]
     },
     "tstl": {
         "luaTarget": "JIT"
