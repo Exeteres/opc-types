@@ -362,8 +362,8 @@ declare namespace GUI {
         setFitting(
             column: number,
             row: number,
-            horizontalFitting: number,
-            verticalFitting: number,
+            horizontalFitting: boolean,
+            verticalFitting: boolean,
             horizontalOffset?: number,
             verticalOffset?: number
         ): this;
