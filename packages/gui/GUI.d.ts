@@ -348,6 +348,17 @@ declare namespace GUI {
         setSpacing(column: number, row: number, spacing: number): this;
 
         /**
+         * Assign the specified grid cell indents (margins) in pixels,
+         * depending on the current alignment of this cell.
+         */
+        setMargin(
+            column: number,
+            row: number,
+            horizontalMargin: number,
+            verticalMargin: number
+        ): this;
+
+        /**
          *  Get current margins in pixels of specified cell
          * @tupleReturn
          */
