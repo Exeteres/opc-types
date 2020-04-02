@@ -21,7 +21,7 @@ This package contains type declarations for [OpenOS](https://ocdoc.cil.li/).
 - [x] Serialization API
 - [x] Shell API
 - [x] Sides API
-- [ ] Term API
+- [x] Term API
 - [ ] Text API
 - [ ] Thread API
 - [ ] Transforms API
