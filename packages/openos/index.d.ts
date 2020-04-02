@@ -1,3 +1,5 @@
+/// <reference types="lua-types/5.2" />
+
 import "./utils";
 import "./components";
 import "./component";
