@@ -23,7 +23,7 @@ This package contains type declarations for [OpenOS](https://ocdoc.cil.li/).
 - [x] Sides API
 - [x] Term API
 - [ ] Text API
-- [ ] Thread API
+- [x] Thread API
 - [ ] Transforms API
 - [ ] Unicode API
 
