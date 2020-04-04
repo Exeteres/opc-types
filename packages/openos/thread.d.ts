@@ -26,6 +26,15 @@ declare module "thread" {
     ): [boolean, string];
 
     /**
+     * Waits for any single thread to complete and is otherwise equivalent to `thread.waitForAll()`.
+     * @tupleReturn
+     */
+    function waitForAny(
+        threads: OpenOS.Thread[],
+        timeout: number
+    ): [boolean, string];
+
+    /**
      * Returns the current thread `t` object.
      * The init process does not represent a thread and nothing is returned from
      * this method if called from the init process and not inside any thread.
