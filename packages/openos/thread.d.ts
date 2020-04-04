@@ -22,7 +22,7 @@ declare module "thread" {
      */
     function waitForAll(
         threads: OpenOS.Thread[],
-        timeout: number
+        timeout?: number
     ): [boolean, string];
 
     /**
@@ -31,7 +31,7 @@ declare module "thread" {
      */
     function waitForAny(
         threads: OpenOS.Thread[],
-        timeout: number
+        timeout?: number
     ): [boolean, string];
 
     /**
