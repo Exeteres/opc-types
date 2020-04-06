@@ -1,6 +1,6 @@
 {
     "name": "@opct/openos",
-    "version": "0.0.13",
+    "version": "0.0.14",
     "description": "TypeScript definitions for Open Computers",
     "types": "index.d.ts",
     "keywords": [
