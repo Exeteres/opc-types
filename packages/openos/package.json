@@ -13,7 +13,7 @@
     "license": "MIT",
     "author": "Exeteres",
     "dependencies": {
-        "lua-types": "^2.5.1",
+        "lua-types": "^2.10.1",
         "typescript-tuple": "^2.2.1"
     }
 }

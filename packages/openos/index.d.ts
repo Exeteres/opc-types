@@ -19,7 +19,3 @@ import "./process";
 import "./filesystem";
 import "./thread";
 import "./os";
-
-declare global {
-    const args: LuaVarArgs<string>;
-}

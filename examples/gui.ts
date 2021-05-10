@@ -11,7 +11,7 @@ import {
     IO_MODE_BOTH,
     IO_MODE_FILE,
     LUA_SYNTAX_PATTERNS,
-    LUA_SYNTAX_COLOR_SCHEME
+    LUA_SYNTAX_COLOR_SCHEME,
 } from "GUI";
 
 import { isDirectory } from "filesystem";

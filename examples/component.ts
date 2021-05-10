@@ -3,7 +3,7 @@
 import * as component from "component";
 import { front } from "sides";
 
-for (let [address, name] of component.list()) {
+for (const [address, name] of component.list()) {
     print(address, name);
 }
 

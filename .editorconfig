@@ -1,0 +1,5 @@
+[*.json]
+tab_width = 4
+
+[*.ts]
+tab_width = 4

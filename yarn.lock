@@ -2,26 +2,53 @@
 # yarn lockfile v1
 
 
-lua-types@^2.5.1:
-  version "2.7.0"
-  resolved "https://registry.yarnpkg.com/lua-types/-/lua-types-2.7.0.tgz#5fad12e9b6c4241587185ec98f057bae6f0b7e65"
-  integrity sha512-XxZUJitEDampMjeYbOIUiiPZkYCv6WjZBPBV4/k6u2J/PWGcA79aP9xdJ2QRfixrJyGJ8LW3dw5Qxq2UIGPOzA==
+"@opct/gui@0.0.4":
+  version "0.0.4"
+  resolved "https://registry.npmjs.org/@opct/gui/-/gui-0.0.4.tgz#be88c90de53a53399b7297f2144355e22ee63905"
+  integrity sha512-1f3g2ojgGvSSYMtD30Wkw+bJc1NY7CPREUVEO4VQKrJBoFmdpASN5QTaYR/0Xqg9exvT7w08TgagFhOzR8/GKw==
+
+function-bind@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.npmjs.org/function-bind/-/function-bind-1.1.1.tgz#a56899d3ea3c9bab874bb9773b7c5ede92f4895d"
+  integrity sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==
+
+has@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.npmjs.org/has/-/has-1.0.3.tgz#722d7cbfc1f6aa8241f16dd814e011e1f41e8796"
+  integrity sha512-f2dvO0VU6Oej7RkWJGrehjbzMAjFp5/VKPp5tTpWIV4JHHZK1/BxbFRtf/siA2SWTe09caDmVtYYzWEIbBS4zw==
+  dependencies:
+    function-bind "^1.1.1"
+
+is-core-module@^2.2.0:
+  version "2.4.0"
+  resolved "https://registry.npmjs.org/is-core-module/-/is-core-module-2.4.0.tgz#8e9fc8e15027b011418026e98f0e6f4d86305cc1"
+  integrity sha512-6A2fkfq1rfeQZjxrZJGerpLCTHRNEBiSgnu0+obeJpEPZRUooHgsizvzv0ZjJwOz3iWIHdJtVWJ/tmPr3D21/A==
+  dependencies:
+    has "^1.0.3"
+
+lua-types@^2.10.1:
+  version "2.10.1"
+  resolved "https://registry.npmjs.org/lua-types/-/lua-types-2.10.1.tgz#e8d0c63bd5ab72351a30afd3b6b08319aca074a3"
+  integrity sha512-Ai7L25I5kHZYGN5C3LALUse7Eus0k/kM9tEO2zwReG2Xuker0c+0e2M4iyfiEvlGOmBc7cDouqJ5lFwyg8JqiQ==
+  dependencies:
+    typescript-to-lua "^0.39.0"
 
 path-parse@^1.0.6:
   version "1.0.6"
-  resolved "https://registry.yarnpkg.com/path-parse/-/path-parse-1.0.6.tgz#d62dbb5679405d72c4737ec58600e9ddcf06d24c"
+  resolved "https://registry.npmjs.org/path-parse/-/path-parse-1.0.6.tgz#d62dbb5679405d72c4737ec58600e9ddcf06d24c"
   integrity sha512-GSmOT2EbHrINBf9SR7CDELwlJ8AENk3Qn7OikK4nFYAu3Ote2+JYNVvkpAEQm3/TLNEJFD/xZJjzyxg3KBWOzw==
 
-resolve@^1.11.0:
-  version "1.14.1"
-  resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.14.1.tgz#9e018c540fcf0c427d678b9931cbf45e984bcaff"
-  integrity sha512-fn5Wobh4cxbLzuHaE+nphztHy43/b++4M6SsGFC2gB8uYwf0C8LcarfCz1un7UTW8OFQg9iNjZ4xpcFVGebDPg==
+resolve@^1.15.1:
+  version "1.20.0"
+  resolved "https://registry.npmjs.org/resolve/-/resolve-1.20.0.tgz#629a013fb3f70755d6f0b7935cc1c2c5378b1975"
+  integrity sha512-wENBPt4ySzg4ybFQW2TT1zMQucPK95HSh/nq2CFTZVOGut2+pQvSsgtda4d26YrYcr067wjbmzOG8byDPBX63A==
   dependencies:
+    is-core-module "^2.2.0"
     path-parse "^1.0.6"
 
 source-map@^0.7.3:
   version "0.7.3"
-  resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.7.3.tgz#5302f8169031735226544092e64981f751750383"
+  resolved "https://registry.npmjs.org/source-map/-/source-map-0.7.3.tgz#5302f8169031735226544092e64981f751750383"
   integrity sha512-CkCj6giN3S+n9qrYiBTX5gystlENnRW5jZeNLHpe6aue+SrHcG5VYwujhW9s4dY31mEGsxBDrHR6oI69fTXsaQ==
 
 typescript-compare@^0.0.2:
@@ -36,14 +63,14 @@ typescript-logic@^0.0.0:
   resolved "https://registry.yarnpkg.com/typescript-logic/-/typescript-logic-0.0.0.tgz#66ebd82a2548f2b444a43667bec120b496890196"
   integrity sha512-zXFars5LUkI3zP492ls0VskH3TtdeHCqu0i7/duGt60i5IGPIpAHE/DWo5FqJ6EjQ15YKXrt+AETjv60Dat34Q==
 
-typescript-to-lua@^0.22.1:
-  version "0.22.1"
-  resolved "https://registry.yarnpkg.com/typescript-to-lua/-/typescript-to-lua-0.22.1.tgz#796df77dae9108d7a265697e746dce31e9663728"
-  integrity sha512-mRKKnFdTftqzmw/7p/BjuL48opgUDgDTPdnOoy3ikVdxPm+i5/yhd5YePLsrIALT9PYSoeKAXJbSOcXoy0d/AA==
+typescript-to-lua@^0.39.0, typescript-to-lua@^0.39.3:
+  version "0.39.3"
+  resolved "https://registry.npmjs.org/typescript-to-lua/-/typescript-to-lua-0.39.3.tgz#d272f4693e466ef42d19ae89e9c23cdad0f3770e"
+  integrity sha512-a9unziEbOc+sDT6ZeKLQV538WhX+rOaOCVjA/pvcjUs0oIESjEGM0HJnz/B3e1sUk/EtgU+b6bZKBcqKX1q4VQ==
   dependencies:
-    resolve "^1.11.0"
+    resolve "^1.15.1"
     source-map "^0.7.3"
-    typescript "^3.5.2"
+    typescript ">=4.0.2"
 
 typescript-tuple@^2.2.1:
   version "2.2.1"
@@ -52,7 +79,7 @@ typescript-tuple@^2.2.1:
   dependencies:
     typescript-compare "^0.0.2"
 
-typescript@^3.5.2:
-  version "3.7.4"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.7.4.tgz#1743a5ec5fef6a1fa9f3e4708e33c81c73876c19"
-  integrity sha512-A25xv5XCtarLwXpcDNZzCGvW2D1S3/bACratYBx2sax8PefsFhlYmkQicKHvpYflFS8if4zne5zT5kpJ7pzuvw==
+typescript@>=4.0.2:
+  version "4.2.4"
+  resolved "https://registry.npmjs.org/typescript/-/typescript-4.2.4.tgz#8610b59747de028fda898a8aef0e103f156d0961"
+  integrity sha512-V+evlYHZnQkaz8TRBuxTA92yZBPotr5H+WhQ7bD3hZUndx5tGOa1fuCgeSjxAzM1RiN5IzvadIXTVefuuwZCRg==

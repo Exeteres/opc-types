@@ -1,2 +1,2 @@
-let [arg1, arg2] = [...args];
+const [arg1, arg2] = [...$vararg];
 print(arg1, arg2);
