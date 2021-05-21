@@ -48,7 +48,7 @@ This package contains type declarations for [OpenOS](https://ocdoc.cil.li/).
 - [x] GPU
 - [x] Hologram
 - [x] Internet
-- [ ] Inventory Controller
+- [x] Inventory Controller
 - [ ] Leash
 - [x] Modem
 - [ ] Motion Sensor
