@@ -18,3 +18,4 @@ import "./hologram";
 import "./internet";
 import "./modem";
 import "./redstone";
+import "./inventory_controller";
