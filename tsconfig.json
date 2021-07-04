@@ -7,7 +7,7 @@
         "strict": true,
         "moduleResolution": "node",
         "rootDir": "examples",
-        "types": ["typescript-to-lua/language-extensions", "lua-types/jit"]
+        "types": ["lua-types/jit"]
     },
     "tstl": {
         "luaTarget": "JIT"

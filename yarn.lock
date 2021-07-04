@@ -2,15 +2,23 @@
 # yarn lockfile v1
 
 
-"@opct/gui@0.0.4":
-  version "0.0.4"
-  resolved "https://registry.npmjs.org/@opct/gui/-/gui-0.0.4.tgz#be88c90de53a53399b7297f2144355e22ee63905"
-  integrity sha512-1f3g2ojgGvSSYMtD30Wkw+bJc1NY7CPREUVEO4VQKrJBoFmdpASN5QTaYR/0Xqg9exvT7w08TgagFhOzR8/GKw==
+enhanced-resolve@^5.8.2:
+  version "5.8.2"
+  resolved "https://registry.yarnpkg.com/enhanced-resolve/-/enhanced-resolve-5.8.2.tgz#15ddc779345cbb73e97c611cd00c01c1e7bf4d8b"
+  integrity sha512-F27oB3WuHDzvR2DOGNTaYy0D5o0cnrv8TeI482VM4kYgQd/FT9lUQwuNsJ0oOHtBUq7eiW5ytqzp7nBFknL+GA==
+  dependencies:
+    graceful-fs "^4.2.4"
+    tapable "^2.2.0"
 
 function-bind@^1.1.1:
   version "1.1.1"
   resolved "https://registry.npmjs.org/function-bind/-/function-bind-1.1.1.tgz#a56899d3ea3c9bab874bb9773b7c5ede92f4895d"
   integrity sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==
+
+graceful-fs@^4.2.4:
+  version "4.2.6"
+  resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.6.tgz#ff040b2b0853b23c3d31027523706f1885d76bee"
+  integrity sha512-nTnJ528pbqxYanhpDYsi4Rd8MAeaBA67+RZ10CM1m3bTAVFEDcd5AuA4a6W5YkGZ1iNXHzZz8T6TBKLeBuNriQ==
 
 has@^1.0.3:
   version "1.0.3"
@@ -51,6 +59,11 @@ source-map@^0.7.3:
   resolved "https://registry.npmjs.org/source-map/-/source-map-0.7.3.tgz#5302f8169031735226544092e64981f751750383"
   integrity sha512-CkCj6giN3S+n9qrYiBTX5gystlENnRW5jZeNLHpe6aue+SrHcG5VYwujhW9s4dY31mEGsxBDrHR6oI69fTXsaQ==
 
+tapable@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/tapable/-/tapable-2.2.0.tgz#5c373d281d9c672848213d0e037d1c4165ab426b"
+  integrity sha512-FBk4IesMV1rBxX2tfiK8RAmogtWn53puLOQlvO8XuwlgxcYbP4mVPS9Ph4aeamSyyVjOl24aYWAuc8U5kCVwMw==
+
 typescript-compare@^0.0.2:
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/typescript-compare/-/typescript-compare-0.0.2.tgz#7ee40a400a406c2ea0a7e551efd3309021d5f425"
@@ -63,7 +76,7 @@ typescript-logic@^0.0.0:
   resolved "https://registry.yarnpkg.com/typescript-logic/-/typescript-logic-0.0.0.tgz#66ebd82a2548f2b444a43667bec120b496890196"
   integrity sha512-zXFars5LUkI3zP492ls0VskH3TtdeHCqu0i7/duGt60i5IGPIpAHE/DWo5FqJ6EjQ15YKXrt+AETjv60Dat34Q==
 
-typescript-to-lua@^0.39.0, typescript-to-lua@^0.39.3:
+typescript-to-lua@^0.39.0:
   version "0.39.3"
   resolved "https://registry.npmjs.org/typescript-to-lua/-/typescript-to-lua-0.39.3.tgz#d272f4693e466ef42d19ae89e9c23cdad0f3770e"
   integrity sha512-a9unziEbOc+sDT6ZeKLQV538WhX+rOaOCVjA/pvcjUs0oIESjEGM0HJnz/B3e1sUk/EtgU+b6bZKBcqKX1q4VQ==
@@ -72,10 +85,20 @@ typescript-to-lua@^0.39.0, typescript-to-lua@^0.39.3:
     source-map "^0.7.3"
     typescript ">=4.0.2"
 
-typescript-tuple@^2.2.1:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/typescript-tuple/-/typescript-tuple-2.2.1.tgz#7d9813fb4b355f69ac55032e0363e8bb0f04dad2"
-  integrity sha512-Zcr0lbt8z5ZdEzERHAMAniTiIKerFCMgd7yjq1fPnDJ43et/k9twIFQMUYff9k5oXcsQ0WpvFcgzK2ZKASoW6Q==
+typescript-to-lua@^0.40.1:
+  version "0.40.1"
+  resolved "https://registry.yarnpkg.com/typescript-to-lua/-/typescript-to-lua-0.40.1.tgz#b897d95b8aa6f9b439c25cb943d2650ac09ba50f"
+  integrity sha512-wbnXddF+kPWKDQMcuVZLRUeZsMde5Qni6FnYIc3SKOAhg2/ZAm9ctWQsyQLwH8piMUX+uZzFXaJ3pMe186crfw==
+  dependencies:
+    enhanced-resolve "^5.8.2"
+    resolve "^1.15.1"
+    source-map "^0.7.3"
+    typescript "~4.3.2"
+
+typescript-tuple@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/typescript-tuple/-/typescript-tuple-5.0.1.tgz#02f443d3a40bfde717572f8b9e88219466718d9e"
+  integrity sha512-QdAYG/L0vUwtJUVGHmp+Jt8/2l+gOMFwCwLpIhUHNDUxyLWOxuDR/2HWNUNGJtZJuoDvOF3yXMSeK9h90H0OiA==
   dependencies:
     typescript-compare "^0.0.2"
 
@@ -83,3 +106,8 @@ typescript@>=4.0.2:
   version "4.2.4"
   resolved "https://registry.npmjs.org/typescript/-/typescript-4.2.4.tgz#8610b59747de028fda898a8aef0e103f156d0961"
   integrity sha512-V+evlYHZnQkaz8TRBuxTA92yZBPotr5H+WhQ7bD3hZUndx5tGOa1fuCgeSjxAzM1RiN5IzvadIXTVefuuwZCRg==
+
+typescript@~4.3.2:
+  version "4.3.5"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.3.5.tgz#4d1c37cc16e893973c45a06886b7113234f119f4"
+  integrity sha512-DqQgihaQ9cUrskJo9kIyW/+g0Vxsk8cDtZ52a3NGh0YNTfpUSArXSohyUGnvbPazEPLu398C0UxmKSOrPumUzA==
