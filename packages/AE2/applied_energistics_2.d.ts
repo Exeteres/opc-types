@@ -1,10 +1,14 @@
 /**
  * This library wraps functionality of Applied Energistics 2.
  * @see https://ocdoc.cil.li/component:applied_energistics
- * @noSelf
+ * @noSelfInFile 
  * @noResolution
  */
 declare module "applied_energistics_2" {
+
+    /**
+     * @noSelf
+     */
     interface me_common {
         /**
          * Get a list of tables representing the available CPUs in the network..
@@ -62,6 +66,9 @@ declare module "applied_energistics_2" {
         getStoredPower(): number;
     }
 
+    /**
+     * @noSelf
+     */
     interface me_controller extends me_common {
         /**
          * Returns the amount of stored energy on the connected side.
@@ -84,6 +91,9 @@ declare module "applied_energistics_2" {
         canReceive(): number;
     }
 
+    /**
+     * @noSelf
+     */
     interface me_interface extends me_common {
         /**
          * Get the configuration of the interface.
@@ -101,6 +111,9 @@ declare module "applied_energistics_2" {
         ): boolean;
     }
 
+    /**
+     * @noSelf
+     */
     interface me_importbus extends me_common {
         /**
          * Get the configuration of the import bus pointing in the specified direction.
@@ -118,6 +131,9 @@ declare module "applied_energistics_2" {
         ): boolean;
     }
 
+    /**
+     * @noSelf
+     */
     interface me_exportbus extends me_common {
         /**
          * Get the configuration of the export bus pointing in the specified direction.
@@ -140,6 +156,9 @@ declare module "applied_energistics_2" {
         exportIntoSlot(side: number, slot: number): boolean;
     }
 
+    /**
+     * @noSelf
+     */
     interface craftable {
         /**
          * Returns the item stack representation of the crafting result.
@@ -156,6 +175,9 @@ declare module "applied_energistics_2" {
         ): craftingStatus;
     }
 
+    /**
+     * @noSelf
+     */
     interface craftingStatus {
         /**
          * Get whether the crafting request has been canceled.
@@ -169,19 +191,20 @@ declare module "applied_energistics_2" {
     }
 
     interface itemStack {
-        hasTag: boolean;
-        isCraftable: boolean;
-        label: string;
-        maxDamage: number;
-        maxSize: number;
-        name: string;
-        size: number;
+        damage?: number;
+        hasTag?: boolean;
+        isCraftable?: boolean;
+        label?: string;
+        maxDamage?: number;
+        maxSize?: number;
+        name?: string;
+        size?: number;
     }
 
     interface cpu {
-        busy: boolean;
-        coprocessors: number;
-        name: string;
-        storage: number;
+        busy?: boolean;
+        coprocessors?: number;
+        name?: string;
+        storage?: number;
     }
 }
