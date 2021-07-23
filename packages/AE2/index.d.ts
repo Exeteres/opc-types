@@ -1,1 +1,1 @@
-import "./AE2";
+import "./applied_energistics_2";

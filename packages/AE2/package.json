@@ -1,5 +1,5 @@
 {
-    "name": "@opct/dbuf",
+    "name": "@opct/ae2",
     "version": "0.0.1",
     "description": "TypeScript definitions for Applied Energistics 2 by ???",
     "types": "index.d.ts",
@@ -11,9 +11,6 @@
         "AE2",
         "types"
     ],
-    "dependencies": {
-        "@opct/image": "^0.0.1"
-    },
     "license": "MIT",
     "author": "Exeteres"
 }
