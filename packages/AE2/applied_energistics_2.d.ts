@@ -6,6 +6,7 @@
  */
 declare module "appliedenergistics2" {
     /**
+     * MeCommon is the base network API functionality for all AE2 interfaces. 
      * @noSelf
      */
     interface MeCommon {
@@ -66,6 +67,7 @@ declare module "appliedenergistics2" {
     }
 
     /**
+     * MeController interface for the AE2 controller. Referred as "me_controller" in ocdocs
      * @noSelf
      */
     interface MeController extends MeCommon {
@@ -91,6 +93,7 @@ declare module "appliedenergistics2" {
     }
 
     /**
+     * MeInterface interface for the AE2 interface blocks. Referred as "me_interface" in ocdocs
      * @noSelf
      */
     interface MeInterface extends MeCommon {
@@ -111,6 +114,7 @@ declare module "appliedenergistics2" {
     }
 
     /**
+     * MeInterface interface for the AE2 Importbus blocks. Referred as "me_importbus" in ocdocs
      * @noSelf
      */
     interface MeImportbus extends MeCommon {
@@ -131,6 +135,7 @@ declare module "appliedenergistics2" {
     }
 
     /**
+     * MeInterface interface for the AE2 Exportbus blocks. Referred as "me_exportbus" in ocdocs
      * @noSelf
      */
     interface MeExportbus extends MeCommon {
