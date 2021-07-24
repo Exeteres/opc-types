@@ -1,11 +1,10 @@
 /**
  * This library wraps functionality of Applied Energistics 2.
  * @see https://ocdoc.cil.li/component:applied_energistics
- * @noSelfInFile 
+ * @noSelfInFile
  * @noResolution
  */
 declare module "applied_energistics_2" {
-
     /**
      * @noSelf
      */
