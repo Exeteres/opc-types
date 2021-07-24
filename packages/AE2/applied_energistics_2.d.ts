@@ -4,25 +4,25 @@
  * @noSelfInFile
  * @noResolution
  */
-declare module "applied_energistics_2" {
+declare module "appliedenergistics2" {
     /**
      * @noSelf
      */
-    interface me_common {
+    interface MeCommon {
         /**
          * Get a list of tables representing the available CPUs in the network..
          */
-        getCpus(): cpu[];
+        getCpus(): Cpu[];
 
         /**
          * Get a list of known item recipes. These can be used to issue crafting requests..
          */
-        getCraftables(filter?: any): craftable[];
+        getCraftables(filter?: any): Craftable[];
 
         /**
          * Get a list of the stored items in the network.
          */
-        getItemsInNetwork(filter?: itemStack): itemStack[];
+        getItemsInNetwork(filter?: ItemStack): ItemStack[];
 
         /**
          * Store items in the network matching the specified filter in the database with the specified address.
@@ -37,7 +37,7 @@ declare module "applied_energistics_2" {
         /**
          * Get a list of the stored fluids in the network.
          */
-        getFluidsInNetwork(): fluid[];
+        getFluidsInNetwork(): Fluid[];
 
         /**
          * Get the average power injection into the network.
@@ -68,7 +68,7 @@ declare module "applied_energistics_2" {
     /**
      * @noSelf
      */
-    interface me_controller extends me_common {
+    interface MeController extends MeCommon {
         /**
          * Returns the amount of stored energy on the connected side.
          */
@@ -93,11 +93,11 @@ declare module "applied_energistics_2" {
     /**
      * @noSelf
      */
-    interface me_interface extends me_common {
+    interface MeInterface extends MeCommon {
         /**
          * Get the configuration of the interface.
          */
-        getInterfaceConfiguration(slot?: number): itemStack[];
+        getInterfaceConfiguration(slot?: number): ItemStack[];
 
         /**
          * Configure the interface.
@@ -113,7 +113,7 @@ declare module "applied_energistics_2" {
     /**
      * @noSelf
      */
-    interface me_importbus extends me_common {
+    interface MeImportbus extends MeCommon {
         /**
          * Get the configuration of the import bus pointing in the specified direction.
          */
@@ -133,7 +133,7 @@ declare module "applied_energistics_2" {
     /**
      * @noSelf
      */
-    interface me_exportbus extends me_common {
+    interface MeExportbus extends MeCommon {
         /**
          * Get the configuration of the export bus pointing in the specified direction.
          */
@@ -158,11 +158,11 @@ declare module "applied_energistics_2" {
     /**
      * @noSelf
      */
-    interface craftable {
+    interface Craftable {
         /**
          * Returns the item stack representation of the crafting result.
          */
-        getItemStack(): itemStack;
+        getItemStack(): ItemStack;
 
         /**
          * Requests the item to be crafted, returning an object that allows tracking the crafting status.
@@ -171,13 +171,13 @@ declare module "applied_energistics_2" {
             amount: number,
             prioritizePower?: boolean,
             cpuName?: string
-        ): craftingStatus;
+        ): CraftingStatus;
     }
 
     /**
      * @noSelf
      */
-    interface craftingStatus {
+    interface CraftingStatus {
         /**
          * Get whether the crafting request has been canceled.
          */
@@ -189,7 +189,7 @@ declare module "applied_energistics_2" {
         isDone(): boolean;
     }
 
-    interface itemStack {
+    interface ItemStack {
         damage?: number;
         hasTag?: boolean;
         isCraftable?: boolean;
@@ -200,14 +200,14 @@ declare module "applied_energistics_2" {
         size?: number;
     }
 
-    interface fluid {
+    interface Fluid {
         amount?: number;
         hasTag?: boolean;
         label?: string;
         name?: string;
     }
 
-    interface cpu {
+    interface Cpu {
         busy?: boolean;
         coprocessors?: number;
         name?: string;
