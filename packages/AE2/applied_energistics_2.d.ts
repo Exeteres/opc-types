@@ -98,7 +98,7 @@ declare module "applied_energistics_2" {
         /**
          * Get the configuration of the interface.
          */
-        getInterfaceConfiguration(slot: number): any; // TODO: Get response
+        getInterfaceConfiguration(slot: number): itemStack[];
 
         /**
          * Configure the interface.
