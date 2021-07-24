@@ -28,10 +28,10 @@ declare module "applied_energistics_2" {
          * Store items in the network matching the specified filter in the database with the specified address.
          */
         store(
-            filter: any,
-            dbAddress: string,
-            startSlot: number,
-            count: number
+            filter?: any,
+            dbAddress?: string,
+            startSlot?: number,
+            count?: number
         ): boolean;
 
         /**
