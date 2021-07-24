@@ -97,16 +97,16 @@ declare module "applied_energistics_2" {
         /**
          * Get the configuration of the interface.
          */
-        getInterfaceConfiguration(slot: number): itemStack[];
+        getInterfaceConfiguration(slot?: number): itemStack[];
 
         /**
          * Configure the interface.
          */
         setInterfaceConfiguration(
-            slot: number,
-            database: string,
-            entry: number,
-            size: number
+            slot?: number,
+            database?: string,
+            entry?: number,
+            size?: number
         ): boolean;
     }
 
@@ -117,16 +117,16 @@ declare module "applied_energistics_2" {
         /**
          * Get the configuration of the import bus pointing in the specified direction.
          */
-        getImportConfiguration(side: number, slot: number): boolean;
+        getImportConfiguration(side: number, slot?: number): boolean;
 
         /**
          * Configure the import bus pointing in the specified direction to import item stacks matching the specified descriptor.
          */
         setImportConfiguration(
             side: number,
-            slot: number,
-            database: string,
-            entry: number
+            slot?: number,
+            database?: string,
+            entry?: number
         ): boolean;
     }
 
@@ -137,16 +137,16 @@ declare module "applied_energistics_2" {
         /**
          * Get the configuration of the export bus pointing in the specified direction.
          */
-        getExportConfiguration(side: number, slot: number): boolean;
+        getExportConfiguration(side: number, slot?: number): boolean;
 
         /**
          * Configure the export bus pointing in the specified direction to export item stacks matching the specified descriptor.
          */
         setExportConfiguration(
             side: number,
-            slot: number,
-            database: string,
-            entry: number
+            slot?: number,
+            database?: string,
+            entry?: number
         ): boolean;
 
         /**
@@ -169,8 +169,8 @@ declare module "applied_energistics_2" {
          */
         request(
             amount: number,
-            prioritizePower: boolean,
-            cpuName: string
+            prioritizePower?: boolean,
+            cpuName?: string
         ): craftingStatus;
     }
 
