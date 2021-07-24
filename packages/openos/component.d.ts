@@ -160,6 +160,7 @@ declare module "component" {
     function getPrimary(componentType: "internet"): OpenOS.Internet;
     function getPrimary(componentType: "inventory_controller"): OpenOS.InventoryController;
     function getPrimary(componentType: "modem"): OpenOS.Modem;
+    function getPrimary(componentType: "me_controller"): AE2.me_controller;
     function getPrimary(componentType: string): any;
 
     /**

@@ -23,7 +23,7 @@ declare module "applied_energistics_2" {
         /**
          * Get a list of the stored items in the network.
          */
-        getItemsInNetwork(filter?: any): itemStack[];
+        getItemsInNetwork(filter?: itemStack): itemStack[];
 
         /**
          * Store items in the network matching the specified filter in the database with the specified address.
@@ -38,7 +38,7 @@ declare module "applied_energistics_2" {
         /**
          * Get a list of the stored fluids in the network.
          */
-        getFluidsInNetwork(): any; // TODO: Find what type of data is helt in this
+        getFluidsInNetwork(): fluid[];
 
         /**
          * Get the average power injection into the network.
@@ -199,6 +199,13 @@ declare module "applied_energistics_2" {
         maxSize?: number;
         name?: string;
         size?: number;
+    }
+
+    interface fluid {
+        amount?: number;
+        hasTag?: boolean;
+        label?: string;
+        name?: string;
     }
 
     interface cpu {
