@@ -1,1 +1,2 @@
-import "./applied_energistics_2";
+import "./ME";
+import "./component_map";

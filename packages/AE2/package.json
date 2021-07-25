@@ -12,5 +12,8 @@
         "types"
     ],
     "license": "MIT",
-    "author": "Exeteres"
+    "author": "Exeteres",
+    "dependencies": {
+        "@opct/common": "^0.0.1"
+    }
 }
