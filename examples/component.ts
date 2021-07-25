@@ -9,7 +9,7 @@ for (const [address, name] of component.list()) {
 
 // Check for redstone card
 if (component.isAvailable("redstone")) {
-    const redstone = component.redstone;
+    const { redstone } = component;
     redstone.setOutput(front, 1);
 } else {
     print("Redstone card not found");

@@ -1,4 +1,4 @@
-declare namespace OpenOS {
+declare namespace OC.Components {
     /**
      * This component represents an inventory controller.
      * @see https://ocdoc.cil.li/component:inventory_controller
@@ -28,11 +28,7 @@ declare namespace OpenOS {
          * Note that the robot cannot drop items into it's own inventory, attempting to do so will cause this to throw an error. You need to use robot.transferTo from the Robot API to do so.
          * @returns true if at least one item was moved, false and a secondary result that describes the error otherwise.
          */
-        dropIntoSlot(
-            side: number,
-            slot: number,
-            count: number | null
-        ): [boolean, string?];
+        dropIntoSlot(side: number, slot: number, count: number | null): [boolean, string?];
 
         /**
          * Takes up to count items from the specified slot of the inventory at the specified side and puts them into the currently selected slot.
@@ -52,12 +48,7 @@ declare namespace OpenOS {
         /**
          * Stores the Itemstack description of the item from the specified slot in an inventory on the specified side, into a specified database slot with the specified address.
          */
-        store(
-            side: number,
-            slot: number,
-            dbAddress: string,
-            dbSlot: number
-        ): boolean;
+        store(side: number, slot: number, dbAddress: string, dbSlot: number): boolean;
 
         /**
          * Stores Itemstack description of item in specified robot inventory slot into specified database slot with the specified database address.
@@ -68,11 +59,7 @@ declare namespace OpenOS {
          * Stores Itemstack description of item in specified robot inventory slot into specified database slot with the specified database address.
          * @returns true if items match.
          */
-        compareToDatabase(
-            slot: number,
-            dBaddress: string,
-            dBslot: number
-        ): boolean;
+        compareToDatabase(slot: number, dBaddress: string, dBslot: number): boolean;
 
         /**
          * Checks to see if Itemstack descriptions in specified slotA and slotB of inventory on specified side match.

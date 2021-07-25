@@ -20,7 +20,7 @@ declare module "term" {
     /**
      * Gets the gpu proxy used by the term api.
      */
-    function gpu(): OpenOS.GPU;
+    function gpu(): OC.Components.GPU;
 
     /**
      * Acts exactly like event.pull taking the same parameters and returning the same results.
@@ -83,12 +83,7 @@ declare module "term" {
      *
      * The function will return a string if input was successful, nil if the pipe was closed (^d), or false if the pipe was interrupted (^c).
      */
-    function read(
-        history?: string[],
-        dobreak?: boolean,
-        hint?: string[] | Function,
-        pwchar?: string
-    ): string;
+    function read(history?: string[], dobreak?: boolean, hint?: string[] | Function, pwchar?: string): string;
 
     /**
      * Allows writing optionally wrapped text to the terminal starting at the current cursor position, updating the cursor accordingly.
@@ -106,7 +101,7 @@ declare module "term" {
      * This changes the gpu used in all terminal output, not just via the term api, i.e. io.write, print,
      * io.stdout:write, etc all use the same output stream, and term.bind is used to change the gpu used.
      */
-    function bind(gpu: OpenOS.GPU): void;
+    function bind(gpu: OC.Components.GPU): void;
 
     /**
      * Convenience method, simply calls getScreen on the terminal's bound gpu (see `term.bind`).

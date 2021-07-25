@@ -1,4 +1,4 @@
-declare namespace OpenOS {
+declare namespace OC.Components {
     /**
      * Computers provide a couple of API callbacks.
      * Note that these can only be called by the computer itself, or its direct neighbors

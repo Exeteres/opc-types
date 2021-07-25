@@ -1,4 +1,4 @@
-declare namespace OpenOS {
+declare namespace OC.Components {
     /**
      * This component is provided by the experience upgrade.
      * @see https://ocdoc.cil.li/component:experience

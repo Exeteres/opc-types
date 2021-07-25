@@ -1,4 +1,4 @@
-declare namespace OpenOS {
+declare namespace OC.Components {
     /**
      * This component is provided by the generator upgrade for robots.
      * Generators have an internal inventory that can store one item stack of fuel items.

@@ -1,4 +1,4 @@
-declare namespace OpenOS {
+declare namespace OC.Components {
     /**
      * This component is provided by the access point to allow computers
      * to change the strength of the signal used to relay wireless messages.

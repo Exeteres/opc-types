@@ -1,4 +1,4 @@
-declare namespace OpenOS {
+declare namespace OC.Components {
     /**
      * This is the component provided by graphics cards.
      * For simple programs the term API will usually all you need.
@@ -42,10 +42,7 @@ declare namespace OpenOS {
          * This is to allow uniform color operations regardless of the color depth supported by the screen and GPU.
          * @tupleReturn
          */
-        setBackground(
-            color: number,
-            isPaletteIndex?: boolean
-        ): [number, number | null];
+        setBackground(color: number, isPaletteIndex?: boolean): [number, number | null];
 
         /**
          * Like `getBackground`, but for the foreground color.
@@ -57,10 +54,7 @@ declare namespace OpenOS {
          * Like `setBackground`, but for the foreground color.
          * @tupleReturn
          */
-        setForeground(
-            color: number,
-            isPaletteIndex?: boolean
-        ): [number, number | null];
+        setForeground(color: number, isPaletteIndex?: boolean): [number, number | null];
 
         /**
          * Gets the RGB value of the color in the palette at the specified index.
@@ -134,10 +128,7 @@ declare namespace OpenOS {
          * and fifth values specify the palette index of the color, otherwise they are nil.
          * @tupleReturn
          */
-        get(
-            x: number,
-            y: number
-        ): [string, number, number, number | null, number | null];
+        get(x: number, y: number): [string, number, number, number | null, number | null];
 
         /**
          * Writes a string to the screen, starting at the specified coordinates.
@@ -154,14 +145,7 @@ declare namespace OpenOS {
          * The source rectangle is specified by the x, y, width and height parameters.
          * The target rectangle is defined by x + tx, y + ty, width and height. Returns true on success, false otherwise.
          */
-        copy(
-            x: number,
-            y: number,
-            width: number,
-            height: number,
-            tx: number,
-            ty: number
-        ): boolean;
+        copy(x: number, y: number, width: number, height: number, tx: number, ty: number): boolean;
 
         /**
          * Fills a rectangle in the screen buffer with the specified character.
@@ -171,12 +155,6 @@ declare namespace OpenOS {
          * Note that filling screens with spaces ( ) is usually less expensive,
          * i.e. consumes less energy, because it is considered a “clear” operation (see config).
          */
-        fill(
-            x: number,
-            y: number,
-            width: number,
-            height: number,
-            char: string
-        ): boolean;
+        fill(x: number, y: number, width: number, height: number, char: string): boolean;
     }
 }

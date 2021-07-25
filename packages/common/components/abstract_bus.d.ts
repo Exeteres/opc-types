@@ -1,4 +1,4 @@
-declare namespace OpenOS {
+declare namespace OC.Components {
     /**
      * This card allows for interfacing with Stargate Tech 2's Abstract Bus system.
      * @see https://ocdoc.cil.li/component:abstract_bus

@@ -53,15 +53,11 @@ declare module "shell" {
     /**
      * Runs the specified command.
      */
-    function execute<T extends any[] = any[]>(
-        command: string,
-        env?: any,
-        args?: LuaVarArgs<string>
-    ): Concat<[boolean], T>;
+    function execute<T extends any[] = any[]>(command: string, env?: any, ...args: string[]): [boolean, ...T];
 
     /**
      * Utility methods intended for programs to parse their arguments.
      * Will return two tables, the first one containing any “normal” parameters, the second containing “options”.
      */
-    function parse(...args: LuaVarArgs<string>): [any, string[]];
+    function parse(...args: string[]): [any, string[]];
 }

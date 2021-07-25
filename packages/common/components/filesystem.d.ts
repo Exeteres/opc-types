@@ -1,4 +1,4 @@
-declare namespace OpenOS {
+declare namespace OC.Components {
     /**
      * This component is provided by Floppy Disks or Hard Disk Drives in Managed mode (for Unmanaged mode, see Drive)
      * @see https://ocdoc.cil.li/component:filesystem

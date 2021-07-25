@@ -28,11 +28,7 @@ declare module "filesystem" {
     /**
      * Concatenates two or more paths.
      */
-    function concat(
-        pathA: string,
-        pathB: string,
-        ...args: LuaVarArgs<string>
-    ): string;
+    function concat(pathA: string, pathB: string, ...args: string[]): string;
 
     /**
      * Returns the path component of a path to a file,

@@ -1,4 +1,4 @@
-declare namespace OpenOS {
+declare namespace OC.Components {
     /**
      * Provided by Drones.
      * Drones are mobile open computer machines, similar to robots, yet more mobile yet more limited.

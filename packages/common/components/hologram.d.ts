@@ -1,4 +1,4 @@
-declare namespace OpenOS {
+declare namespace OC.Components {
     /**
      * This component is provided by the Hologram Projector.
      * These can be used to create holographic projections in a resolution of 48x32x48, over a maximum area of 9x6x9 blocks.
@@ -30,25 +30,12 @@ declare namespace OpenOS {
          * Note: Before 1.3.3 there was no minY argument and all voxels below and
          * including the specified height would be set, all voxels above would be unset.
          */
-        fill(
-            x: number,
-            z: number,
-            minY?: number,
-            maxY?: number,
-            value?: number
-        ): void;
+        fill(x: number, z: number, minY?: number, maxY?: number, value?: number): void;
 
         /**
          * Copies an area of columns by the specified translation.
          */
-        copy(
-            x: number,
-            z: number,
-            sx: number,
-            sz: number,
-            tx: number,
-            tz: number
-        ): void;
+        copy(x: number, z: number, sx: number, sz: number, tx: number, tz: number): void;
 
         /**
          * Returns the current render scale of the hologram.

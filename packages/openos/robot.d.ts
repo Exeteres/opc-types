@@ -208,31 +208,19 @@ declare module "robot" {
      * will be one of `blockactivated`, `itemplaced`, `iteminteracted` or `itemused`.
      * @tupleReturn
      */
-    function use(
-        side?: number,
-        sneaky?: boolean,
-        duration?: number
-    ): [boolean, string?];
+    function use(side?: number, sneaky?: boolean, duration?: number): [boolean, string?];
 
     /**
      * As robot.use except that the item is used aiming at the area above the robot.
      * @tupleReturn
      */
-    function useUp(
-        side?: number,
-        sneaky?: boolean,
-        duration?: number
-    ): [boolean, string?];
+    function useUp(side?: number, sneaky?: boolean, duration?: number): [boolean, string?];
 
     /**
      * As robot.use except that the item is used aiming at the area below the robot.
      * @tupleReturn
      */
-    function useDown(
-        side?: number,
-        sneaky?: boolean,
-        duration?: number
-    ): [boolean, string?];
+    function useDown(side?: number, sneaky?: boolean, duration?: number): [boolean, string?];
 
     /**
      * Tries to move the robot forward.

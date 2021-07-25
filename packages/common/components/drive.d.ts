@@ -1,4 +1,4 @@
-declare namespace OpenOS {
+declare namespace OC.Components {
     /**
      * This component is provided by Floppy Disks or Hard Disk Drives in Unmanaged mode (for Managed mode, see Filesystem)
      * To switch a managed drive to Unmanaged mode, just right click with the item in your hand and select Unmanaged mode

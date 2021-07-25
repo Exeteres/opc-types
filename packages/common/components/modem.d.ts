@@ -1,4 +1,4 @@
-declare namespace OpenOS {
+declare namespace OC.Components {
     type ModemData = undefined | boolean | number | string;
 
     /**

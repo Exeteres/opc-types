@@ -1,4 +1,4 @@
-declare namespace OpenOS {
+declare namespace OC.Components {
     /**
      * The database component is primarily useful to work with “full” item stacks,
      * including NBT tags, which are (by default) not available to Lua scripts

@@ -20,19 +20,13 @@ declare module "thread" {
      * A thread is “completed” under multiple conditions, see `t:join()` for details.
      * @tupleReturn
      */
-    function waitForAll(
-        threads: OpenOS.Thread[],
-        timeout?: number
-    ): [boolean, string];
+    function waitForAll(threads: OpenOS.Thread[], timeout?: number): [boolean, string];
 
     /**
      * Waits for any single thread to complete and is otherwise equivalent to `thread.waitForAll()`.
      * @tupleReturn
      */
-    function waitForAny(
-        threads: OpenOS.Thread[],
-        timeout?: number
-    ): [boolean, string];
+    function waitForAny(threads: OpenOS.Thread[], timeout?: number): [boolean, string];
 
     /**
      * Returns the current thread `t` object.
@@ -43,6 +37,8 @@ declare module "thread" {
 }
 
 declare namespace OpenOS {
+    type ThreadStatus = "running" | "suspended" | "dead";
+
     interface Thread {
         /**
          * Resumes (or thaws) a suspended thread.
@@ -89,7 +85,7 @@ declare namespace OpenOS {
         /**
          * Returns the thread status as a string.
          */
-        status(): "running" | "suspended" | "dead";
+        status(): ThreadStatus;
 
         /**
          * Attaches a thread to a process, conventionally known as a child thread or attached thread.
