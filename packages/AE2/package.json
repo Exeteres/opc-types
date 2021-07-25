@@ -1,19 +1,19 @@
 {
-    "name": "@opct/common",
+    "name": "@opct/ae2",
     "version": "0.1.0",
-    "description": "TypeScript definitions for Open Computers common APIs",
+    "description": "TypeScript definitions for Applied Energistics 2",
     "types": "index.d.ts",
     "keywords": [
         "typescript",
         "tstl",
         "open computers",
-        "common apis",
+        "Applied Energistics 2",
+        "AE2",
         "types"
     ],
-    "repository": "https://github.com/Exeteres/opc-types",
     "license": "MIT",
     "author": "Exeteres",
     "dependencies": {
-        "lua-types": "^2.10.1"
+        "@opct/common": "^0.1.0"
     }
 }
