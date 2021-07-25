@@ -1,16 +1,16 @@
 {
-    "name": "@opct/openos",
-    "version": "0.0.18",
-    "description": "TypeScript definitions for OpenOS",
+    "name": "@opct/ae2",
+    "version": "0.0.1",
+    "description": "TypeScript definitions for Applied Energistics 2",
     "types": "index.d.ts",
     "keywords": [
         "typescript",
         "tstl",
         "open computers",
-        "openos",
+        "Applied Energistics 2",
+        "AE2",
         "types"
     ],
-    "repository": "https://github.com/Exeteres/opc-types",
     "license": "MIT",
     "author": "Exeteres",
     "dependencies": {
