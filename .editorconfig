@@ -3,3 +3,4 @@ tab_width = 4
 
 [*.ts]
 tab_width = 4
+max_line_length = 120

@@ -1,9 +1,6 @@
 /// <reference types="lua-types/5.2" />
+/// <reference types="@opct/common" />
 
-import "./utils";
-import "./components";
-import "./component";
-import "./computer";
 import "./event";
 import "./uuid";
 import "./internet";
@@ -19,3 +16,4 @@ import "./process";
 import "./filesystem";
 import "./thread";
 import "./os";
+import "./event";

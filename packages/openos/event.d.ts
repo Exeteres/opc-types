@@ -11,27 +11,19 @@ declare module "event" {
     /**
      * Register a new event listener that should be called for events with the specified name.
      */
-    function listen<T extends any[]>(
-        event: string,
-        callback: EventHandler<T>
-    ): boolean;
+    function listen<T extends OC.EventType>(event: T, callback: EventHandler<OC.EventMap[T]>): boolean;
+    function listen<T extends any[]>(event: string, callback: EventHandler<T>): boolean;
 
     /**
      * Unregister a previously registered event listener.
      */
-    function ignore<T extends any[]>(
-        event: string,
-        callback: EventHandler<T>
-    ): boolean;
+    function ignore<T extends OC.EventType>(event: T, callback: EventHandler<OC.EventMap[T]>): boolean;
+    function ignore<T extends any[]>(event: string, callback: EventHandler<T>): boolean;
 
     /**
      * Starts a new timer that will be called after the time specified in interval.
      */
-    function timer(
-        interval: number,
-        callback: Function,
-        times?: number
-    ): number;
+    function timer(interval: number, callback: Function, times?: number): number;
 
     /**
      * Cancels a timer previously created with `event.timer`.
@@ -42,26 +34,22 @@ declare module "event" {
      * Pulls and returns the next available event from the queue, or waits until one becomes available.
      * @tupleReturn
      */
-    function pull<T extends any[]>(name: string): Concat<[string], T>;
+    function pull<T extends OC.EventType>(event: T): [T, ...OC.EventMap[T]];
+    function pull<T extends any[]>(event: string): [string, ...T];
 
     /**
      * Pulls and returns the next available event from the queue,
      * or waits until one becomes available but allows filtering by specifying filter function.
      * @tupleReturn
      */
-    function pullFiltered<T extends any[]>(
-        timeout?: number,
-        filter?: Function
-    ): Concat<[string], T>;
+    function pullFiltered(timeout?: number, filter?: Function): [string, ...any[]];
 
     /**
      * As its arguments pullMultiple accepts multiple event names to be pulled,
      * allowing basic filtering of multiple events at once.
      * @tupleReturn
      */
-    function pullMultiple<T extends any[]>(
-        ...events: LuaVarArgs<string>
-    ): Concat<[string], T>;
+    function pullMultiple(...events: string[]): [string, ...any[]];
 
     /**
      * Global event callback error handler.
@@ -73,5 +61,6 @@ declare module "event" {
      * This is only an alias to computer.pushSignal.
      * This does not modify the arguments in any way.
      */
-    function push<T extends LuaVarArgs<any>>(name: string, ...args: T): void;
+    function push(name: string, ...args: any[]): void;
+    function push<T extends OC.EventType>(name: T, ...args: OC.EventMap[T]): void;
 }

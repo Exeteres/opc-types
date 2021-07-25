@@ -1,4 +1,4 @@
-declare namespace OpenOS {
+declare namespace OC.Components {
     /**
      * This component represents a Redstone card.
      * @see https://ocdoc.cil.li/component:redstone

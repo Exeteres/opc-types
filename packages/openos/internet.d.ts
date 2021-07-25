@@ -13,12 +13,7 @@ declare module "internet" {
      * and it's associated value is the value for that variable.
      * Method can be explicitly specified to values such as GET, POST, or PUT.
      */
-    function request(
-        url: string,
-        data?: any,
-        headers?: any,
-        method?: string
-    ): LuaIterable<any>;
+    function request(url: string, data?: any, headers?: any, method?: string): LuaIterable<any>;
 
     /**
      * Opens a buffered socket stream to the specified address.

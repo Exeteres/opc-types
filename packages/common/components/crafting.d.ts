@@ -1,4 +1,4 @@
-declare namespace OpenOS {
+declare namespace OC.Components {
     /**
      * This component allows a robot to craft items and is provided by the crafting upgrade.
      * @see https://ocdoc.cil.li/component:crafting

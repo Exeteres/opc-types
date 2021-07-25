@@ -8,12 +8,7 @@ declare module "process" {
     /**
      * Loads a Lua script from the specified absolute path and sets it up as a process.
      */
-    function load(
-        path: string,
-        env?: any,
-        init?: Function,
-        name?: string
-    ): LuaThread;
+    function load(path: string, env?: any, init?: Function, name?: string): LuaThread;
 
     /**
      * Returns a table containing the command and path of the specified process, and some other data.

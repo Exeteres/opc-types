@@ -1,4 +1,4 @@
-declare namespace OpenOS {
+declare namespace OC.Components {
     /**
      * This component is provided by the geolyzer block.
      * @see https://ocdoc.cil.li/component:geolyzer

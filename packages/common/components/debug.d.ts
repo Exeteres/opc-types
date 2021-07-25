@@ -1,4 +1,4 @@
-declare namespace OpenOS {
+declare namespace OC.Components {
     /**
      * The Debug Card, which is only available in creative mode, provides a set of fairly
      * dangerous functionality for use in setting things up to debug and test code.
@@ -95,12 +95,7 @@ declare namespace OpenOS {
          * the robot from moving forward, if the robot is facing in the negative x direction.
          * @tupleReturn
          */
-        scanContentsAt(
-            x: number,
-            y: number,
-            z: number,
-            worldId?: number
-        ): [boolean, string, any];
+        scanContentsAt(x: number, y: number, z: number, worldId?: number): [boolean, string, any];
     }
 
     interface World {
@@ -132,25 +127,12 @@ declare namespace OpenOS {
         /**
          * Remove some fluid from a tank at the specified location.
          */
-        removeFluid(
-            amount: number,
-            x: number,
-            y: number,
-            z: number,
-            side: number
-        ): boolean;
+        removeFluid(amount: number, x: number, y: number, z: number, side: number): boolean;
 
         /**
          * Insert some fluid into the tank at the specified location.
          */
-        insertFluid(
-            id: string,
-            amount: number,
-            x: number,
-            y: number,
-            z: number,
-            side: number
-        ): boolean;
+        insertFluid(id: string, amount: number, x: number, y: number, z: number, side: number): boolean;
 
         /**
          * Gets the name of the current dimension.
@@ -195,13 +177,7 @@ declare namespace OpenOS {
         /**
          * Set the block at the specified coordinates.
          */
-        setBlock(
-            x: number,
-            y: number,
-            z: number,
-            id: number | string,
-            meta: number
-        ): number;
+        setBlock(x: number, y: number, z: number, id: number | string, meta: number): number;
 
         /**
          * Set all blocks in the area defined by the two corner points (x1, y1, z1) and (x2, y2, z2).
@@ -220,13 +196,7 @@ declare namespace OpenOS {
         /**
          * Reduce the size of an item stack in the inventory at the specified location.
          */
-        removeItem(
-            x: number,
-            y: number,
-            z: number,
-            slot: number,
-            count?: number
-        ): number;
+        removeItem(x: number, y: number, z: number, slot: number, count?: number): number;
 
         /**
          * Insert an item stack into the inventory at the specified location.
@@ -272,13 +242,7 @@ declare namespace OpenOS {
         /**
          * Play a sound at the specified coordinates.
          */
-        playSoundAt(
-            x: number,
-            y: number,
-            z: number,
-            sound: string,
-            range: number
-        ): void;
+        playSoundAt(x: number, y: number, z: number, sound: string, range: number): void;
 
         /**
          * Get the NBT of the block at the specified coordinates.
@@ -293,12 +257,7 @@ declare namespace OpenOS {
         /**
          * Gets the block state for the block at the specified position, optionally getting additional display related data
          */
-        getBlockState(
-            x: number,
-            y: number,
-            z: number,
-            actualState?: boolean
-        ): void;
+        getBlockState(x: number, y: number, z: number, actualState?: boolean): void;
     }
 
     interface Player {
@@ -366,12 +325,7 @@ declare namespace OpenOS {
         /**
          * Adds the item stack to the players inventory.
          */
-        insertItem(
-            id: string,
-            amount: number,
-            meta: number,
-            nbt?: string
-        ): number;
+        insertItem(id: string, amount: number, meta: number, nbt?: string): number;
 
         /**
          * Clear the players inventory.
@@ -393,20 +347,12 @@ declare namespace OpenOS {
         /**
          * Increases the score of a player for a certain objective.
          */
-        increasePlayerScore(
-            playerName: string,
-            objectiveName: string,
-            score: number
-        ): void;
+        increasePlayerScore(playerName: string, objectiveName: string, score: number): void;
 
         /**
          * Decrease the score of a player for a certain objective.
          */
-        decreasePlayerScore(
-            playerName: string,
-            objectiveName: string,
-            score: number
-        ): void;
+        decreasePlayerScore(playerName: string, objectiveName: string, score: number): void;
 
         /**
          * Add a player to a team.
@@ -441,10 +387,6 @@ declare namespace OpenOS {
         /**
          * Sets the score of a player for a certain objective.
          */
-        setPlayerScore(
-            playerName: string,
-            objectiveName: string,
-            score: number
-        ): void;
+        setPlayerScore(playerName: string, objectiveName: string, score: number): void;
     }
 }

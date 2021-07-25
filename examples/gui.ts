@@ -20,9 +20,8 @@ const app = application();
 
 app.addChild(panel(1, 1, app.width, app.height, 0x2d2d2d));
 app.addChild(panel(1, 1, 4, 1, 0xeeeeee));
-const mainMenu = app.addChild(
-    menu(5, 1, app.width - 4, 0xeeeeee, 0x666666, 0x3366cc, 0xffffff)
-);
+
+const mainMenu = app.addChild(menu(5, 1, app.width - 4, 0xeeeeee, 0x666666, 0x3366cc, 0xffffff));
 
 mainMenu.addItem("VERY (VERY!) Simple Text Viewer", 0x0);
 
@@ -64,21 +63,7 @@ tree.onItemSelected = () => {
 };
 
 const editor = app.addChild(
-    codeView(
-        22,
-        2,
-        72,
-        22,
-        1,
-        2,
-        10,
-        [],
-        {},
-        LUA_SYNTAX_PATTERNS,
-        LUA_SYNTAX_COLOR_SCHEME,
-        true,
-        []
-    )
+    codeView(22, 2, 72, 22, 1, 2, 10, [], {}, LUA_SYNTAX_PATTERNS, LUA_SYNTAX_COLOR_SCHEME, true, [])
 );
 
 app.draw(true);
