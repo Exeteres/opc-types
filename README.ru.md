@@ -42,24 +42,19 @@ yarn add typescript-to-lua
 ```json
 // tsconfig.json
 {
-    "compilerOptions": {
-        "target": "esnext",
-        "outDir": "dist",
-        "module": "commonjs",
-        "lib": ["esnext"],
-        "strict": true,
-        "moduleResolution": "node",
-        "rootDir": "src",
-        "types": [
-            "lua-types/jit",
-            "@opct/openos",
-            "@opct/gui",
-            "@opct/mineos"
-        ]
-    },
-    "tstl": {
-        "luaTarget": "JIT"
-    }
+  "compilerOptions": {
+    "target": "esnext",
+    "outDir": "dist",
+    "module": "commonjs",
+    "lib": ["esnext"],
+    "strict": true,
+    "moduleResolution": "node",
+    "rootDir": "src",
+    "types": ["lua-types/jit", "@opct/openos", "@opct/gui", "@opct/mineos"]
+  },
+  "tstl": {
+    "luaTarget": "JIT"
+  }
 }
 ```
 
@@ -69,14 +64,14 @@ yarn add typescript-to-lua
 - Вместо реального мода можно использовать эмулятор. Иначе необходимо установить `filesystem.bufferChanges` на `false`, чтобы иметь внешний доступ к диску.
 - Создайте ссылку на диск, чтобы хранить исходный код отдельно от него:
 
-    ```shell
-    # linux / macos
-    ln -s /path/to/disk/home/app dist
-    ```
+  ```shell
+  # linux / macos
+  ln -s /path/to/disk/home/app dist
+  ```
 
-    ```cmd
-    # windows (cmd)
-    mklink /j dist C:\path\to\disk\home
-    ```
+  ```cmd
+  # windows (cmd)
+  mklink /j dist C:\path\to\disk\home
+  ```
 
 - Используйте `tstl --watch`
