@@ -16,21 +16,18 @@ declare module "robot" {
      * (Note: Drones return `true` even if the block is passable), `false` otherwise.
      * The second parameter describes what is in front in general and
      * is one of either `entity`, `solid`, `replaceable`, `liquid`, `passable` or `air`.
-     * @tupleReturn
      */
-    function detect(): [boolean, string];
+    function detect(): LuaMultiReturn<[boolean, string]>;
 
     /**
      * As `robot.detect()` except that it scans the block directly above the robot.
-     * @tupleReturn
      */
-    function detectUp(): [boolean, string];
+    function detectUp(): LuaMultiReturn<[boolean, string]>;
 
     /**
      * As `robot.detect()` except that it scans the block directly belove the robot.
-     * @tupleReturn
      */
-    function detectDown(): [boolean, string];
+    function detectDown(): LuaMultiReturn<[boolean, string]>;
 
     /**
      * Selects the given inventory slot (if specified) and returns the current inventory slot.
@@ -148,28 +145,24 @@ declare module "robot" {
      * which is usually not necessary and only included for compatibility to other mods.
      * @returns `true` if an item could be placed, `false` otherwise.
      * If placement failed, the secondary return parameter will describe why the placement failed.
-     * @tupleReturn
      */
-    function place(side?: number, sneaky?: boolean): [boolean, string?];
+    function place(side?: number, sneaky?: boolean): LuaMultiReturn<[boolean, string?]>;
 
     /**
      * As `robot.place` except that the robot tries to place the item into the space directly above it.
-     * @tupleReturn
      */
-    function placeUp(side?: number, sneaky?: boolean): [boolean, string?];
+    function placeUp(side?: number, sneaky?: boolean): LuaMultiReturn<[boolean, string?]>;
 
     /**
      * As `robot.place` except that the robot tries to place the item into the space directly below it.
-     * @tupleReturn
      */
-    function placeDown(side?: number, sneaky?: boolean): [boolean, string?];
+    function placeDown(side?: number, sneaky?: boolean): LuaMultiReturn<[boolean, string?]>;
 
     /**
      * @returns The durability of the item currently in the tool slot, followed by its current durability, followed by its maximum durability.
      * If no item is equipped or the item has no durability this returns nil and an error message describing why no durability could be returned.
-     * @tupleReturn
      */
-    function durability(): [number, number, number | null, string];
+    function durability(): LuaMultiReturn<[number, number, number | null, string]>;
 
     /**
      *
@@ -178,21 +171,18 @@ declare module "robot" {
      * See the Sides API for a list of possible sides.
      * @returns `true` if the robot could interact with the block or entity in front of it, `false` otherwise.
      * If successful the secondary parameter describes what the robot interacted with and will be one of `entity`, `block` or `fire`.
-     * @tupleReturn
      */
-    function swing(side?: number, sneaky?: boolean): [boolean, string];
+    function swing(side?: number, sneaky?: boolean): LuaMultiReturn<[boolean, string]>;
 
     /**
      * As `robot.swing` except that the block or entity directly above the robot will be the target.
-     * @tupleReturn
      */
-    function swingUp(side?: number, sneaky?: boolean): [boolean, string];
+    function swingUp(side?: number, sneaky?: boolean): LuaMultiReturn<[boolean, string]>;
 
     /**
      * As `robot.swing` except that the block or entity directly below the robot will be the target.
-     * @tupleReturn
      */
-    function swingDown(side?: number, sneaky?: boolean): [boolean, string];
+    function swingDown(side?: number, sneaky?: boolean): LuaMultiReturn<[boolean, string]>;
 
     /**
      *
@@ -206,48 +196,41 @@ declare module "robot" {
      * @returns `true` if the robot could interact with the block or entity in front of it, `false` otherwise.
      * If successful the secondary parameter describes what the robot interacted with and
      * will be one of `blockactivated`, `itemplaced`, `iteminteracted` or `itemused`.
-     * @tupleReturn
      */
-    function use(side?: number, sneaky?: boolean, duration?: number): [boolean, string?];
+    function use(side?: number, sneaky?: boolean, duration?: number): LuaMultiReturn<[boolean, string?]>;
 
     /**
      * As robot.use except that the item is used aiming at the area above the robot.
-     * @tupleReturn
      */
-    function useUp(side?: number, sneaky?: boolean, duration?: number): [boolean, string?];
+    function useUp(side?: number, sneaky?: boolean, duration?: number): LuaMultiReturn<[boolean, string?]>;
 
     /**
      * As robot.use except that the item is used aiming at the area below the robot.
-     * @tupleReturn
      */
-    function useDown(side?: number, sneaky?: boolean, duration?: number): [boolean, string?];
+    function useDown(side?: number, sneaky?: boolean, duration?: number): LuaMultiReturn<[boolean, string?]>;
 
     /**
      * Tries to move the robot forward.
      * @returns `true` if the robot successfully moved, `null` otherwise.
      * If movement fails a secondary result will be returned describing why it failed,
      * which will either be `impossible move`, `not enough energy` or the description of the obstacle as `robot.detect` would return.
-     * @tupleReturn
      */
-    function forward(): [boolean, string?];
+    function forward(): LuaMultiReturn<[boolean, string?]>;
 
     /**
      * As `robot.forward()` except that the robot tries to move backward.
-     * @tupleReturn
      */
-    function back(): [boolean, string?];
+    function back(): LuaMultiReturn<[boolean, string?]>;
 
     /**
      * As `robot.forward()` except that the robot tries to move upwards.
-     * @tupleReturn
      */
-    function up(): [boolean, string?];
+    function up(): LuaMultiReturn<[boolean, string?]>;
 
     /**
      * As `robot.forward()` except that the robot tries to move downwards.
-     * @tupleReturn
      */
-    function down(): [boolean, string?];
+    function down(): LuaMultiReturn<[boolean, string?]>;
 
     /**
      * Turns the robot 90° to the left.

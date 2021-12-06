@@ -18,15 +18,13 @@ declare module "thread" {
      * This blocking call can return in `timeout` seconds if provided.
      * Returns success and an error message on failure.
      * A thread is “completed” under multiple conditions, see `t:join()` for details.
-     * @tupleReturn
      */
-    function waitForAll(threads: OpenOS.Thread[], timeout?: number): [boolean, string];
+    function waitForAll(threads: OpenOS.Thread[], timeout?: number): LuaMultiReturn<[boolean, string]>;
 
     /**
      * Waits for any single thread to complete and is otherwise equivalent to `thread.waitForAll()`.
-     * @tupleReturn
      */
-    function waitForAny(threads: OpenOS.Thread[], timeout?: number): [boolean, string];
+    function waitForAny(threads: OpenOS.Thread[], timeout?: number): LuaMultiReturn<[boolean, string]>;
 
     /**
      * Returns the current thread `t` object.
@@ -53,9 +51,8 @@ declare namespace OpenOS {
          * Please note that currently the hard interrupt exception is only thrown once, and the behavior of a process with threads
          * when a hard interrupt is thrown is unspecified. At this time, any one of the threads or the parent process may take the exception.
          * These details are not part of the specification for threads and any part of this implementation detail may change later.
-         *  @tupleReturn
          */
-        resume(): [boolean, string];
+        resume(): LuaMultiReturn<[boolean, string]>;
 
         /**
          * Suspends (or freezes) a running thread.
@@ -69,9 +66,8 @@ declare namespace OpenOS {
          * Please note that if you suspend a thread that is blocked waiting for an event,
          * it is unspecified which event the thread will receive when it is next resumed.
          * Suspending the current thread causes the thread to immediately yield and does not resume until `t:resume()` is called explicitly elsewhere.
-         * @tupleReturn
          */
-        suspend(): [boolean, string];
+        suspend(): LuaMultiReturn<[boolean, string]>;
 
         /**
          * Stabby stab! Kills the thread dead.
@@ -93,18 +89,16 @@ declare namespace OpenOS {
          * When initially created a thread is already attached to the current process.
          * This method returns nil and an error message if level refers to a nonexistent process, otherwise it returns truthy.
          * An attached thread blocks its parent process from closing until the thread dies (or is killed, or the parent process aborts).
-         * @tupleReturn
          */
-        attach(level?: number): [boolean, string];
+        attach(level?: number): LuaMultiReturn<[boolean, string]>;
 
         /**
          * Detaches a thread from its parent if it has one.
          * Returns nil and an error message if no action was taken,
          * otherwise returns self (handy if you want to create and detach a thread in one line).
          * A detached thread will continue to run until the computer is shutdown or rebooted, or the thread dies.
-         * @tupleReturn
          */
-        detach(): [OpenOS.Thread, string];
+        detach(): LuaMultiReturn<[OpenOS.Thread, string]>;
 
         /**
          * Blocks the caller until t is no longer running or (optionally) returns false if `timeout` seconds is reached.
@@ -118,8 +112,7 @@ declare namespace OpenOS {
          * Calling `thread.waitForAll({t})` is functionally equivalent to calling `t:join()`.
          * When a processs is closing it will call `thread.waitForAll` on the group of its child threads if it has any.
          * A child thread blocks its parent thread by the same machanism.
-         * @tupleReturn
          */
-        join(timeout?: number): [boolean, string];
+        join(timeout?: number): LuaMultiReturn<[boolean, string]>;
     }
 }

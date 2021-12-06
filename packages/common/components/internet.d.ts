@@ -61,9 +61,8 @@ declare namespace OC.Components {
 
         /**
          * Get response code, message and headers.
-         * @tupleReturn
          */
-        response(): [number, string, any];
+        response(): LuaMultiReturn<[number, string, any]>;
 
         /**
          * Closes an open socket stream.

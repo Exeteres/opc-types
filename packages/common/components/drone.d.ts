@@ -55,9 +55,8 @@ declare namespace OC.Components {
          * Lets the robot use the currently equipped item in the tool slot against the block or space directly in front of the robot.
          * Returns `true` if successful (may take time depending on block being interacted with - e.g.. Obsidian takes time to mine).
          * Returns `false` if the operation fails with a description of why it failed.
-         * @tupleReturn
          */
-        swing(side: number): [boolean, string | null];
+        swing(side: number): LuaMultiReturn<[boolean, string | null]>;
 
         /**
          * Returns the size of the device's internal inventory.

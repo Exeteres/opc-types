@@ -360,9 +360,8 @@ declare namespace GUI {
 
         /**
          *  Get current margins in pixels of specified cell
-         * @tupleReturn
          */
-        getMargin(column: number, row: number): [number, number, number];
+        getMargin(column: number, row: number): LuaMultiReturn<[number, number, number]>;
 
         /**
          * Assign the specified grid cell automatic resizing of child objects by horizonal, vertical or both directions.
@@ -426,9 +425,8 @@ declare namespace GUI {
 
         /**
          * Get current margins in pixels of List
-         * @tupleReturn
          */
-        getMargin(): [number, number, number];
+        getMargin(): LuaMultiReturn<[number, number, number]>;
     }
 
     interface Menu extends GUI.Layout {

@@ -32,24 +32,21 @@ declare module "event" {
 
     /**
      * Pulls and returns the next available event from the queue, or waits until one becomes available.
-     * @tupleReturn
      */
-    function pull<T extends OC.EventType>(event: T): [T, ...OC.EventMap[T]];
-    function pull<T extends any[]>(event: string): [string, ...T];
+    function pull<T extends OC.EventType>(event: T): LuaMultiReturn<[T, ...OC.EventMap[T]]>;
+    function pull<T extends any[]>(event: string): LuaMultiReturn<[string, ...T]>;
 
     /**
      * Pulls and returns the next available event from the queue,
      * or waits until one becomes available but allows filtering by specifying filter function.
-     * @tupleReturn
      */
-    function pullFiltered(timeout?: number, filter?: Function): [string, ...any[]];
+    function pullFiltered(timeout?: number, filter?: Function): LuaMultiReturn<[string, ...any[]]>;
 
     /**
      * As its arguments pullMultiple accepts multiple event names to be pulled,
      * allowing basic filtering of multiple events at once.
-     * @tupleReturn
      */
-    function pullMultiple(...events: string[]): [string, ...any[]];
+    function pullMultiple(...events: string[]): LuaMultiReturn<[string, ...any[]]>;
 
     /**
      * Global event callback error handler.

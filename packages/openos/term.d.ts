@@ -13,9 +13,8 @@ declare module "term" {
 
     /**
      * Gets the width, height, x offset, y offset, relative x, and relative y values.
-     * @tupleReturn
      */
-    function getViewport(): [number, number, number, number, number, number];
+    function getViewport(): LuaMultiReturn<[number, number, number, number, number, number]>;
 
     /**
      * Gets the gpu proxy used by the term api.
@@ -25,15 +24,13 @@ declare module "term" {
     /**
      * Acts exactly like event.pull taking the same parameters and returning the same results.
      * This method is used to blink the cursor while waiting for an event result.
-     * @tupleReturn
      */
-    function pull(...params: any[]): any[];
+    function pull(...params: any[]): LuaMultiReturn<any[]>;
 
     /**
      * Gets the current position of the cursor.
-     * @tupleReturn
      */
-    function getCursor(): [number, number];
+    function getCursor(): LuaMultiReturn<[number, number]>;
 
     /**
      * Sets the cursor position to the specified coordinates.

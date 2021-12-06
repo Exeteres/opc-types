@@ -93,9 +93,8 @@ declare namespace OC.Components {
          * The final value returned is a serialized or table representation of the entity or block scanned at the location.
          * The following code snippet can be used to debug what is possibly blocking
          * the robot from moving forward, if the robot is facing in the negative x direction.
-         * @tupleReturn
          */
-        scanContentsAt(x: number, y: number, z: number, worldId?: number): [boolean, string, any];
+        scanContentsAt(x: number, y: number, z: number, worldId?: number): LuaMultiReturn<[boolean, string, any]>;
     }
 
     interface World {
@@ -215,9 +214,8 @@ declare namespace OC.Components {
 
         /**
          * Get the current spawn point coordinates.
-         * @tupleReturn
          */
-        getSpawnPoint(): [number, number, number];
+        getSpawnPoint(): LuaMultiReturn<[number, number, number]>;
 
         /**
          * Set the spawn point coordinates.
@@ -293,9 +291,8 @@ declare namespace OC.Components {
 
         /**
          * Get the player's position.
-         * @tupleReturn
          */
-        getPosition(): [number, number, number];
+        getPosition(): LuaMultiReturn<[number, number, number]>;
 
         /**
          * Set the player's position.
