@@ -7,9 +7,8 @@ declare module "doubleBuffering" {
     /**
      * Get screen buffer resolution.
      * There's also `buffer.getWidth()` and `buffer.getHeight()` methods for your comfort.
-     * @tupleReturn
      */
-    function getResolution(): [number, number];
+    function getResolution(): LuaMultiReturn<[number, number]>;
 
     /**
      * Set screen buffer and GPU resolution.
@@ -51,9 +50,8 @@ declare module "doubleBuffering" {
 
     /**
      * Get currently set draw limit
-     * @tupleReturn
      */
-    function getDrawLimit(): [number, number, number, number];
+    function getDrawLimit(): LuaMultiReturn<[number, number, number, number]>;
 
     /**
      * Copy content of specified area from screen buffer and return it as a table.
@@ -80,9 +78,8 @@ declare module "doubleBuffering" {
 
     /**
      * Get value of specified pixel on screen.
-     * @tupleReturn
      */
-    function get(x: number, y: number): [number, number, string];
+    function get(x: number, y: number): LuaMultiReturn<[number, number, string]>;
 
     /**
      * Fill the rectangular area with the specified pixel data.
@@ -196,9 +193,8 @@ declare module "doubleBuffering" {
 
     /**
      * Get data values of pixel with specified index.
-     * @tupleReturn
      */
-    function rawGet(index: number): [number, number, string];
+    function rawGet(index: number): LuaMultiReturn<[number, number, string]>;
 }
 
 type PixelData = number[][];

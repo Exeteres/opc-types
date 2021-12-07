@@ -45,15 +45,13 @@ declare module "filesystem" {
     /**
      * This is similar to component.proxy,
      * except that the specified string may also be a file system component's label.
-     * @tupleReturn
      */
-    function proxy(filter: string): [any, string];
+    function proxy(filter: string): LuaMultiReturn<[any, string]>;
 
     /**
      * Mounts a file system at the specified path.
-     * @tupleReturn
      */
-    function mount(fs: any, path: string): [boolean | null, string];
+    function mount(fs: any, path: string): LuaMultiReturn<[boolean | null, string]>;
 
     /**
      * Returns an iterator function over all currently mounted file system component's proxies
@@ -69,22 +67,19 @@ declare module "filesystem" {
     /**
      * Checks if the object at the specified path is a symlink,
      * if so returns the path to where it links.
-     * @tupleReturn
      */
-    function isLink(path: string): [boolean, string | null];
+    function isLink(path: string): LuaMultiReturn<[boolean, string | null]>;
 
     /**
      * Creates a symbolic link to the specified target path at the specified path.
-     * @tupleReturn
      */
-    function link(target: string, linkpath: string): [boolean | null, string];
+    function link(target: string, linkpath: string): LuaMultiReturn<[boolean | null, string]>;
 
     /**
      * Gets the file system component's proxy that contains the specified path.
      * Returns the proxy and mount path, or `null` and an error message.
-     * @tupleReturn
      */
-    function get(path: string): [any, string];
+    function get(path: string): LuaMultiReturn<[any, string]>;
 
     /**
      * Checks whether a file or folder exist at the specified path.
@@ -112,32 +107,28 @@ declare module "filesystem" {
     /**
      * Returns an iterator over all elements in the directory at the specified path.
      * Returns null and an error messages if the path is invalid or some other error occurred.
-     * @tupleReturn
      */
-    function list(path: string): [LuaIterable<string> | null, string];
+    function list(path: string): LuaMultiReturn<[LuaIterable<string> | null, string]>;
 
     /**
      * Creates a new directory at the specified path.
      * Creates any parent directories that do not exist yet, if necessary.
      * Returns true on success, null and an error message otherwise.
-     * @tupleReturn
      */
-    function makeDirectory(path: string): [true | null, string];
+    function makeDirectory(path: string): LuaMultiReturn<[true | null, string]>;
 
     /**
      * Deletes a file or folder. If the path specifies a folder,
      * deletes all files and subdirectories in the folder, recursively.
      * Return true on success, null and an error message otherwise.
-     * @tupleReturn
      */
-    function remove(path: string): [true | null, string];
+    function remove(path: string): LuaMultiReturn<[true | null, string]>;
 
     /**
      * Renames a file or folder.
      * If the paths point to different file system components this will only work for files,
      * because it actually perform a copy operation, followed by a deletion if the copy succeeds.
      * Returns true on success, null and an error message otherwise.
-     * @tupleReturn
      */
-    function rename(oldPath: string, newPath: string): [true | null, string];
+    function rename(oldPath: string, newPath: string): LuaMultiReturn<[true | null, string]>;
 }

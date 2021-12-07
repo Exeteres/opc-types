@@ -21,9 +21,8 @@ declare namespace OC.Components {
          * * “selected slot does not contain fuel” if the selected slot has no item which can be burnt
          * * “different fuel type already queued” if there is already another type of item in the generator
          * * “queue is full” if there already are 64 items of that type in the generator
-         * @tupleReturn
          */
-        insert(count?: number): [boolean, string | null];
+        insert(count?: number): LuaMultiReturn<[boolean, string | null]>;
 
         /**
          * Removes up to the specified number of fuel items from the generator

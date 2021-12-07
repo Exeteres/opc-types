@@ -8,9 +8,8 @@ declare namespace OC.Components {
         /**
          * Get the size of the inventory at the specified side.
          * @returns the size of the inventory, or null followed by a description why this function failed (usually no inventory).
-         * @tupleReturn
          */
-        getInventorySize(side: number): number | [boolean, string];
+        getInventorySize(side: number): LuaMultiReturn<[number] | [boolean, string]>;
 
         /**
          * Get a table describing the item in the specified slot or nil. Deprecated for getting info about robot's own inventory, see getStackInInternalSlot.

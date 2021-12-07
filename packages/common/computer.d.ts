@@ -115,9 +115,8 @@ declare namespace OC {
          * Tries to pull a signal from the queue, waiting up to the specified amount of time before failing and returning nil.
          * If no timeout is specified waits forever.
          * The first returned result is the signal name, following results correspond to what was pushed in pushSignal, for example.
-         * @tupleReturn
          */
-        pullSignal<T extends any[]>(timeout?: number): [string, ...T];
+        pullSignal<T extends any[]>(timeout?: number): LuaMultiReturn<[string, ...T]>;
 
         /**
          * Causes the computer to produce a beep sound at frequency Hz for duration seconds.

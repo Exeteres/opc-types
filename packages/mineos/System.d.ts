@@ -33,9 +33,8 @@ declare module "System" {
      * since multiple characters following a single - will be interpreted as multiple options.
      * Options specified with 2 dashes are not split and can have multiple letters.
      * Also, 2-dash options can be given values by using an equal sign.
-     * @tupleReturn
      */
-    export function parseArguments(): [string[], Option[]];
+    export function parseArguments(): LuaMultiReturn<[string[], Option[]]>;
 
     /**
      * Creates an shortcut with .lnk extension by given where path.
@@ -102,10 +101,9 @@ declare module "System" {
      * Adds instance of `GUI.window` object to MineOS windows container, adds corresponding icon to dock and adds window menu data.
      * If `keepCoordinates` argument is set, window coordinates will be kept, otherwise window will be centered.
      * Returns pointer to main system `GUI.workspace` object, a pointer to given window object and a pointer to system `GUI.menu` object.
-     * @tupleReturn
      */
     export function addWindow(
         window: GUI.Window,
         keepCoordinates?: boolean
-    ): [GUI.Workspace, GUI.Window, GUI.Menu];
+    ): LuaMultiReturn<[GUI.Workspace, GUI.Window, GUI.Menu]>;
 }
