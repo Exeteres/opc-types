@@ -1,6 +1,6 @@
 {
     "name": "@opct/gui",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "description": "TypeScript definitions for GUI library by IgorTimofeev",
     "types": "index.d.ts",
     "keywords": [
@@ -11,7 +11,7 @@
         "types"
     ],
     "dependencies": {
-        "@opct/image": "^0.1.2"
+        "@opct/image": "^0.1.3"
     },
     "license": "MIT",
     "author": "Exeteres"

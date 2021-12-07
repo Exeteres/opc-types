@@ -1,6 +1,6 @@
 {
     "name": "@opct/common",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "description": "TypeScript definitions for Open Computers common APIs",
     "types": "index.d.ts",
     "keywords": [
