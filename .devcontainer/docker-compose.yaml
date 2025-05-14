@@ -3,6 +3,8 @@ services:
     image: ghcr.io/exeteres/devcontainer/node
     volumes:
       - ..:/home/dev/workspace:cached
+      - ~/.ssh/id_rsa.pub:/home/dev/.ssh/id_rsa:ro
+      - ~/.ssh/id_ed25519.pub:/home/dev/.ssh/id_ed25519.pub:ro
     command: sleep infinity
 
 networks:
