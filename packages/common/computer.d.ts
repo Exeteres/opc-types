@@ -6,7 +6,7 @@
  * @noResolution
  */
 declare module "computer" {
-    const computer: OC.ComponentApi;
+    const computer: OC.ComputerApi;
     export = computer;
 }
 
