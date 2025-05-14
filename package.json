@@ -6,16 +6,28 @@
     "private": true,
     "scripts": {
         "build-examples": "tstl",
-        "release": "lerna version --conventional-commits --create-release github",
-        "publish-packages": "lerna publish from-git -y --no-verify-access"
+        "shipit": "auto shipit"
     },
     "workspaces": [
         "packages/*"
     ],
     "devDependencies": {
-        "lerna": "^4.0.0",
+        "lerna": "^8.1.9",
         "lua-types": "^2.10.1",
-        "typescript-to-lua": "^0.40.1"
+        "typescript-to-lua": "^0.40.1",
+        "@auto-it/conventional-commits": "^11.3.0",
+        "@auto-it/first-time-contributor": "^11.3.0",
+        "auto": "^11.3.0"
     },
-    "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+    "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e",
+    "repository": "Exeteres/opc-types",
+    "auto": {
+        "plugins": [
+            "npm",
+            "conventional-commits",
+            "first-time-contributor",
+            "released"
+        ],
+        "author": "github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+    }
 }
