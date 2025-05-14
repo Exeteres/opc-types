@@ -1,3 +1,34 @@
+# v0.1.4 (Wed May 14 2025)
+
+:tada: This release contains work from new contributors! :tada:
+
+Thanks for all your work!
+
+:heart: Fedor Chubukov ([@Exeteres](https://github.com/Exeteres))
+
+:heart: inklesspen_rus ([@inklesspen1rus](https://github.com/inklesspen1rus))
+
+#### 🐛 Bug Fix
+
+- `@opct/common`
+  - Fixed computer type [#17](https://github.com/Exeteres/opc-types/pull/17) ([@inklesspen1rus](https://github.com/inklesspen1rus))
+
+#### ⚠️ Pushed to `master`
+
+- chore: Fix devcontainer ([@Exeteres](https://github.com/Exeteres))
+- ci: Fix release workflow ([@Exeteres](https://github.com/Exeteres))
+- ci: Add automatic release ([@Exeteres](https://github.com/Exeteres))
+- chore: add .devcontainer ([@Exeteres](https://github.com/Exeteres))
+- `@opct/ae2`, `@opct/common`, `@opct/openos`
+  - v0.1.4 ([@Exeteres](https://github.com/Exeteres))
+
+#### Authors: 2
+
+- Fedor Chubukov ([@Exeteres](https://github.com/Exeteres))
+- inklesspen_rus ([@inklesspen1rus](https://github.com/inklesspen1rus))
+
+---
+
 # Change Log
 
 All notable changes to this project will be documented in this file.
