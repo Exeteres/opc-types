@@ -1,0 +1,12 @@
+services:
+  main:
+    image: ghcr.io/exeteres/devcontainer/node
+    volumes:
+      - ..:/home/dev/workspace:cached
+    command: sleep infinity
+
+networks:
+  default:
+    driver: bridge
+    driver_opts:
+      com.docker.network.driver.mtu: 1200
