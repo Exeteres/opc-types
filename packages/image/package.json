@@ -1,6 +1,6 @@
 {
     "name": "@opct/image",
-    "version": "0.1.5",
+    "version": "0.1.6",
     "description": "TypeScript definitions for Image library by IgorTimofeev",
     "types": "index.d.ts",
     "keywords": [
