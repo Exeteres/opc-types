@@ -1,3 +1,16 @@
+# v0.1.6 (Tue May 20 2025)
+
+#### 🐛 Bug Fix
+
+- Added more overloads for event.pull function [#18](https://github.com/Exeteres/opc-types/pull/18) ([@inklesspen1rus](https://github.com/inklesspen1rus))
+- Added more overloads for event.pull function ([@inklesspen1rus](https://github.com/inklesspen1rus))
+
+#### Authors: 1
+
+- inklesspen_rus ([@inklesspen1rus](https://github.com/inklesspen1rus))
+
+---
+
 # Change Log
 
 All notable changes to this project will be documented in this file.

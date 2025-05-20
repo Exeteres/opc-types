@@ -1,3 +1,16 @@
+# v0.1.6 (Tue May 20 2025)
+
+#### 🐛 Bug Fix
+
+- `@opct/openos`
+  - Added more overloads for event.pull function [#18](https://github.com/Exeteres/opc-types/pull/18) ([@inklesspen1rus](https://github.com/inklesspen1rus))
+
+#### Authors: 1
+
+- inklesspen_rus ([@inklesspen1rus](https://github.com/inklesspen1rus))
+
+---
+
 # v0.1.4 (Wed May 14 2025)
 
 :tada: This release contains work from new contributors! :tada:
