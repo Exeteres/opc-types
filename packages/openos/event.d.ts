@@ -35,6 +35,9 @@ declare module "event" {
      */
     function pull<T extends OC.EventType>(event: T): LuaMultiReturn<[T, ...OC.EventMap[T]]>;
     function pull<T extends any[]>(event: string): LuaMultiReturn<[string, ...T]>;
+    function pull<T extends OC.EventType>(timeout: number, event: T): LuaMultiReturn<[T, ...OC.EventMap[T]]>;
+    function pull<T extends any[]>(timeout: number, event: string): LuaMultiReturn<[string, ...T]>;
+    function pull<T extends any[]>(timeout: number): LuaMultiReturn<[string, ...T]>;
 
     /**
      * Pulls and returns the next available event from the queue,
