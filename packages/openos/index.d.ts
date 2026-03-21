@@ -17,3 +17,4 @@ import "./filesystem";
 import "./thread";
 import "./os";
 import "./event";
+import "./unicode"
