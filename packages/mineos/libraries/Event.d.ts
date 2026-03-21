@@ -1,3 +1,5 @@
+/// <reference types="@opct/common"/>
+
 /**
  * Event handling library for managing callbacks and signal processing with interrupt support
  *
