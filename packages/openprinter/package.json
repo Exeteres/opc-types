@@ -1,6 +1,6 @@
 {
-  "name": "openprinter",
-  "version": "1.0.0",
+  "name": "@opct/openprinter",
+  "version": "0.1.6",
   "description": "TypeScript definitions for OpenPrinter",
   "types": "index.d.ts",
   "keywords": [
