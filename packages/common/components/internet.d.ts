@@ -18,12 +18,12 @@ declare namespace OC.Components {
         /**
          * Opens a new TCP connection. Returns the handle of the connection.
          */
-        connect(address: string, port?: number): TCPSocket;
+        connect(address: string, port?: number): LuaMultiReturn<[TCPSocket] | [undefined, string]>;
 
         /**
-         * Sends a new HTTP request. Returns the handle of the connectio
+         * Sends a new HTTP request. Returns the handle of the connection.
          */
-        request(url: string, postData?: string, headers?: any[]): HTTPRequest;
+        request(url: string, postData?: string, headers?: Record<string, string>, method?: string): LuaMultiReturn<[HTTPRequest] | [undefined, string]>;
     }
 
     interface TCPSocket {
@@ -56,13 +56,15 @@ declare namespace OC.Components {
     interface HTTPRequest {
         /**
          * Tries to read data from the response. Returns the read byte array.
+         *
+         * @noSelf
          */
-        read(n?: number): string;
+        read(n?: number): LuaMultiReturn<[string?] | [undefined, string]>;
 
         /**
-         * Get response code, message and headers.
+         * Get response code, message, and headers.
          */
-        response(): LuaMultiReturn<[number, string, any]>;
+        response(): LuaMultiReturn<[number, string, Record<string, string[]>]>;
 
         /**
          * Closes an open socket stream.

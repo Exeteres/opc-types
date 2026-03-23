@@ -6,16 +6,26 @@ This package contains type declarations for [MineOS](https://github.com/IgorTimo
 
 ### APIs
 
-- [ ] Color API
-- [ ] Component API
-- [ ] Compressor API
-- [ ] Event API
-- [ ] Filesystem API
-- [x] [GUI API](https://github.com/Exeteres/opc-types/tree/master/packages/gui)
-- [ ] Internet API
-- [ ] Keyboard API
-- [ ] Number API
-- [ ] Paths API
-- [ ] Screen API
+- [x] Base64 API
+- [x] BigLetters API
+- [x] Bit32 API
+- [x] Color API
+- [x] Component API
+- [x] Compressor API
+- [x] Event API
+- [x] Filesystem API
+- [x] FTP API
+- [x] GUI API
+- [x] Image API
+- [x] Internet API
+- [x] JSON API
+- [x] Keyboard API
+- [x] Network API
+- [x] Number API
+- [x] Paths API
+- [x] SHA-256 API
+- [x] Screen API
 - [x] System API
-- [ ] Text API
+- [x] Vector API
+- [x] Text API
+- [x] XML API

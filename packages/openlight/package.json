@@ -1,0 +1,19 @@
+{
+  "name": "@opct/openlight",
+  "version": "0.1.6",
+  "description": "TypeScript definitions for OpenLight",
+  "types": "index.d.ts",
+  "keywords": [
+    "typescript",
+    "tstl",
+    "open computers",
+    "openlight",
+    "types"
+  ],
+  "repository": "https://github.com/Exeteres/opc-types",
+  "license": "MIT",
+  "author": "Exeteres",
+  "dependencies": {
+    "@opct/common": "^0.1.6"
+  }
+}

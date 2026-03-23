@@ -23,4 +23,4 @@ This package contains type declarations for [OpenOS](https://ocdoc.cil.li/).
 - [ ] Text API
 - [x] Thread API
 - [ ] Transforms API
-- [ ] Unicode API
+- [x] Unicode API

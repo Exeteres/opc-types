@@ -11,7 +11,7 @@
         "types"
     ],
     "dependencies": {
-        "@opct/gui": "^0.1.6"
+      "@opct/common": "~0.1.6"
     },
     "license": "MIT",
     "author": "Exeteres"
