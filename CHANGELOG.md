@@ -1,3 +1,26 @@
+# v0.2.0 (Mon Mar 23 2026)
+
+#### 🚀 Enhancement
+
+- `@opct/common`, `@opct/mineos`, `@opct/openlight`, `@opct/openos`, `@opct/openprinter`, `@opct/opensecurity`
+  - More type declarations [#19](https://github.com/Exeteres/opc-types/pull/19) ([@dnrovs](https://github.com/dnrovs))
+
+#### 🐛 Bug Fix
+
+- `@opct/ae2`, `@opct/common`, `@opct/mineos`, `@opct/openlight`, `@opct/openos`, `@opct/openprinter`, `@opct/opensecurity`
+  - fix: Make all packages public ([@Exeteres](https://github.com/Exeteres))
+
+#### ⚠️ Pushed to `master`
+
+- Update README ([@Exeteres](https://github.com/Exeteres))
+
+#### Authors: 2
+
+- Fedor Chubukov ([@Exeteres](https://github.com/Exeteres))
+- Yaroslav ([@dnrovs](https://github.com/dnrovs))
+
+---
+
 # v0.1.6 (Tue May 20 2025)
 
 #### 🐛 Bug Fix

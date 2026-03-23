@@ -1,3 +1,15 @@
+# v0.2.0 (Mon Mar 23 2026)
+
+#### 🐛 Bug Fix
+
+- fix: Make all packages public ([@Exeteres](https://github.com/Exeteres))
+
+#### Authors: 1
+
+- Fedor Chubukov ([@Exeteres](https://github.com/Exeteres))
+
+---
+
 # Change Log
 
 All notable changes to this project will be documented in this file.

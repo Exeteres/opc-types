@@ -1,3 +1,27 @@
+# v0.2.0 (Mon Mar 23 2026)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, Yaroslav ([@dnrovs](https://github.com/dnrovs)), for all your work!
+
+#### 🚀 Enhancement
+
+- More type declarations [#19](https://github.com/Exeteres/opc-types/pull/19) ([@dnrovs](https://github.com/dnrovs))
+- feat: updated MineOS libraries type declarations ([@dnrovs](https://github.com/dnrovs))
+
+#### 🐛 Bug Fix
+
+- fix: Make all packages public ([@Exeteres](https://github.com/Exeteres))
+- refactor: delete standalone libraries and move them to @opct/mineos ([@dnrovs](https://github.com/dnrovs))
+- fix: add missing type reference ([@dnrovs](https://github.com/dnrovs))
+
+#### Authors: 2
+
+- Fedor Chubukov ([@Exeteres](https://github.com/Exeteres))
+- Yaroslav ([@dnrovs](https://github.com/dnrovs))
+
+---
+
 # Change Log
 
 All notable changes to this project will be documented in this file.
