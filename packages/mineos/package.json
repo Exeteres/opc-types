@@ -1,6 +1,6 @@
 {
     "name": "@opct/mineos",
-    "version": "0.1.6",
+    "version": "0.2.0",
     "description": "TypeScript definitions for MineOS by IgorTimofeev",
     "types": "index.d.ts",
     "keywords": [
@@ -11,11 +11,11 @@
         "types"
     ],
     "dependencies": {
-      "@opct/common": "~0.1.6"
+        "@opct/common": "^0.2.0"
     },
     "license": "MIT",
     "author": "Exeteres",
     "publishConfig": {
-      "access": "public"
+        "access": "public"
     }
 }
