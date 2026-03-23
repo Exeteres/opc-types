@@ -15,7 +15,8 @@ This package contains type declarations for [MineOS](https://github.com/IgorTimo
 - [x] Event API
 - [x] Filesystem API
 - [x] FTP API
-- [x] [GUI API](https://github.com/Exeteres/opc-types/tree/master/packages/gui)
+- [x] GUI API
+- [x] Image API
 - [x] Internet API
 - [x] JSON API
 - [x] Keyboard API

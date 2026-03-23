@@ -1,5 +1,3 @@
-/// <reference types="./Paths"/>
-
 /**
  * This library is the core of the operating system and allows you to manage it at a basic level.
  *
