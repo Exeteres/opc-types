@@ -13,6 +13,9 @@
     "repository": "https://github.com/Exeteres/opc-types",
     "license": "MIT",
     "author": "Exeteres",
+    "publishConfig": {
+        "access": "public"
+    },
     "dependencies": {
         "lua-types": "^2.10.1"
     }

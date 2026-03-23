@@ -13,6 +13,9 @@
     "repository": "https://github.com/Exeteres/opc-types",
     "license": "MIT",
     "author": "Exeteres",
+    "publishConfig": {
+        "access": "public"
+    },
     "dependencies": {
         "@opct/common": "^0.1.6"
     }
