@@ -17,11 +17,23 @@
 
 ## Вступление
 
-В этом репозитории находятся тайпинги для [OpenOS](https://ocdoc.cil.li/) и [GUI](https://github.com/IgorTimofeev/GUI) (и некоторых его зависимостей).
+В этом репозитории находятся TypeScript-тайпинги для API OpenComputers, некоторых его модов и операционных систем, включая [OpenOS](https://ocdoc.cil.li/) и [MineOS](https://github.com/IgorTimofeev/MineOS).
 
 В качестве транспилера предполагается использование [TypeScriptToLua](https://github.com/TypeScriptToLua/TypeScriptToLua).
 
 В папке `examples` можно найти немного примеров. Также обратите внимание на [VSCode расширение](https://github.com/Exeteres/oc-ts-extension) для интеграции TypeScript с OpenComputers.
+
+## Поддерживаемые моды / операционные системы
+
+| Название                           | Тип                  | Пакет                                       |
+| ---------------------------------- | -------------------- | ------------------------------------------- |
+| OpenComputers (общий API)          | Мод                  | [@opct/common](packages/common)             |
+| Интеграция с Applied Energistics 2 | Мод                  | [@opct/ae2](packages/ae2)                   |
+| OpenLight                          | Мод                  | [@opct/openlight](packages/openlight)       |
+| OpenPrinter                        | Мод                  | [@opct/openprinter](packages/openprinter)   |
+| OpenSecurity                       | Мод                  | [@opct/opensecurity](packages/opensecurity) |
+| OpenOS                             | Операционная система | [@opct/openos](packages/openos)             |
+| MineOS                             | Операционная система | [@opct/mineos](packages/mineos)             |
 
 ## Установка
 
@@ -31,9 +43,6 @@ yarn add @opct/openos # or npm install @opct/openos -S
 
 # Typings for MineOS
 yarn add @opct/mineos
-
-# Typings for GUI
-yarn add @opct/gui
 
 # TSTL
 yarn add typescript-to-lua
@@ -50,7 +59,7 @@ yarn add typescript-to-lua
     "strict": true,
     "moduleResolution": "node",
     "rootDir": "src",
-    "types": ["lua-types/jit", "@opct/openos", "@opct/gui", "@opct/mineos"]
+    "types": ["lua-types/jit", "@opct/openos", "@opct/mineos"]
   },
   "tstl": {
     "luaTarget": "JIT"

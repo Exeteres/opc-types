@@ -17,11 +17,23 @@
 
 ## Introduction
 
-This repository contains type declarations for [OpenOS](https://ocdoc.cil.li/) and [GUI](https://github.com/IgorTimofeev/GUI) (and also some of it dependencies).
+This repository contains TypeScript declarations for OpenComputers APIs, some of its mods and operating systems, including [OpenOS](https://ocdoc.cil.li/) and [MineOS](https://github.com/IgorTimofeev/MineOS).
 
 It is assumed that you will use [TypeScriptToLua](https://github.com/TypeScriptToLua/TypeScriptToLua) as a transpiler.
 
 Some examples can be found in the `examples` folder. Also look at [VSCode extension](https://github.com/Exeteres/oc-ts-extension), which integrates TypeScript with OpenComputers.
+
+## Supported mods / operating systems
+
+| Name                              | Type             | Package                                     |
+| --------------------------------- | ---------------- | ------------------------------------------- |
+| OpenComputers (common API)        | Mod              | [@opct/common](packages/common)             |
+| Applied Energistics 2 integration | Mod              | [@opct/ae2](packages/ae2)                   |
+| OpenLight                         | Mod              | [@opct/openlight](packages/openlight)       |
+| OpenPrinter                       | Mod              | [@opct/openprinter](packages/openprinter)   |
+| OpenSecurity                      | Mod              | [@opct/opensecurity](packages/opensecurity) |
+| OpenOS                            | Operating system | [@opct/openos](packages/openos)             |
+| MineOS                            | Operating system | [@opct/mineos](packages/mineos)             |
 
 ## Installation
 
@@ -32,9 +44,6 @@ yarn add @opct/openos # or npm install @opct/openos -S
 # Typings for MineOS
 yarn add @opct/mineos
 
-# Typings for GUI
-yarn add @opct/gui
-
 # TSTL
 yarn add typescript-to-lua
 ```
@@ -42,24 +51,19 @@ yarn add typescript-to-lua
 ```json
 // tsconfig.json
 {
-    "compilerOptions": {
-        "target": "esnext",
-        "outDir": "dist",
-        "module": "commonjs",
-        "lib": ["esnext"],
-        "strict": true,
-        "moduleResolution": "node",
-        "rootDir": "src",
-        "types": [
-            "lua-types/jit",
-            "@opct/openos",
-            "@opct/gui",
-            "@opct/mineos"
-        ]
-    },
-    "tstl": {
-        "luaTarget": "JIT"
-    }
+  "compilerOptions": {
+    "target": "esnext",
+    "outDir": "dist",
+    "module": "commonjs",
+    "lib": ["esnext"],
+    "strict": true,
+    "moduleResolution": "node",
+    "rootDir": "src",
+    "types": ["lua-types/jit", "@opct/openos", "@opct/mineos"]
+  },
+  "tstl": {
+    "luaTarget": "JIT"
+  }
 }
 ```
 
@@ -69,14 +73,14 @@ yarn add typescript-to-lua
 - Instead of a real mod, you can use an emulator. Otherwise, it is necessary to set `filesystem.bufferChanges` to `false` in order to have external access to the disk.
 - Create a link to the disk to keep the source code separate from it:
 
-    ```shell
-    # linux / macos
-    ln -s /path/to/disk/home/app dist
-    ```
+  ```shell
+  # linux / macos
+  ln -s /path/to/disk/home/app dist
+  ```
 
-    ```cmd
-    # windows (cmd)
-    mklink /j dist C:\path\to\disk\home
-    ```
+  ```cmd
+  # windows (cmd)
+  mklink /j dist C:\path\to\disk\home
+  ```
 
 - Use `tstl --watch`
